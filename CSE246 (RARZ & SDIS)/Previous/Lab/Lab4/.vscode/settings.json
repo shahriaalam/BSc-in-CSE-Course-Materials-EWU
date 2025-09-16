@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "__config": "cpp",
+        "atomic": "cpp",
+        "barrier": "cpp",
+        "*.tcc": "cpp",
+        "memory_resource": "cpp",
+        "future": "cpp",
+        "istream": "cpp",
+        "mutex": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp"
+    }
+}
