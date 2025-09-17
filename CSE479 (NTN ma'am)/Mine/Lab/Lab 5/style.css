@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('image/lab6Img1.PNG');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    max-width: 1200px;  /* Adjusted to prevent overflow */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    color: #ff3366;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Adjusted gap between columns */
+    width: 100%;
+    flex-wrap: wrap;  /* Ensures responsive design */
+}
+
+.form-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    min-width: 400px;  /* Ensures enough width for each column */
+}
+
+.form-column:first-child {
+    padding-right: 10px;
+}
+
+.form-column:last-child {
+    padding-left: 10px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: flex-start; /* Aligns labels and inputs side by side */
+    align-items: center;  /* Vertically centers labels and inputs */
+    gap: 15px;  /* Adds space between labels and inputs */
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    width: 150px;  /* Adjust label width */
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    flex: 1;  /* Ensures inputs take the remaining width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: flex-start;  /* Align radio buttons closer to labels */
+    gap: 10px;  /* Reduced the gap between radio buttons */
+}
+
+.radio-group input {
+    margin-right: 5px;  /* Reduced margin between radio input and label */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff3366;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6699;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+
+
+
+/* Already_registered.php */
+.a_form-container {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h2 {
+    color: #ff3366;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+a.btn {
+    background-color: #ff3366;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+a.btn:hover {
+    background-color: #ff6699;
+}

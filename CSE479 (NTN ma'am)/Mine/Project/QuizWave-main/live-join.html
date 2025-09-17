@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Join Live Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="./image/favicon.png" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/theme-transitions.css" />
+    <link rel="stylesheet" href="css/live.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div id="joinCard" class="card">
+        <h1>Join Live Quiz</h1>
+        <p class="muted">Enter the PIN from your teacher and your nickname.</p>
+        <div>
+          <div>
+            <label class="muted">PIN</label>
+            <input
+              id="pinInput"
+              class="input"
+              placeholder="123456"
+              maxlength="6"
+            />
+          </div>
+          <div>
+            <label class="muted">Nickname</label>
+            <input
+              id="nickInput"
+              class="input"
+              placeholder="e.g., Aisha"
+              maxlength="32"
+            />
+          </div>
+        </div>
+        <div>
+          <button id="joinBtn">Join</button>
+          <button id="leaveBtn" disabled>Leave</button>
+        </div>
+        <div id="joinMsg" class="muted"></div>
+      </div>
+
+      <div id="lobby" class="card">
+        <h2 id="lobbyTitle">Lobby</h2>
+        <div class="muted">Waiting for host to start…</div>
+      </div>
+
+      <div id="play" class="live-card">
+        <h2 id="qPrompt">Question</h2>
+        <div id="qChoices" class="choices two-col"></div>
+        <button id="submitBtn" disabled>Submit</button>
+        <div id="after" class="muted"></div>
+      </div>
+    </main>
+
+    <footer class="container footer-style">
+      © <span id="year"></span> QuizWave
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/01-supabase-connection.js"></script>
+    <script src="js/21-live-join.js"></script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

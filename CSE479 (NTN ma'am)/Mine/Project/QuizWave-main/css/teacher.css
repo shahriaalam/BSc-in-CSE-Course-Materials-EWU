@@ -1,0 +1,522 @@
+/* Teacher Home — responsive layout, gutters, uniform cards (uses base.css tokens) */
+
+/* ---------- Global overrides (beat base.css buttons) ---------- */
+button, .btn {
+  padding: 8px 14px !important;     /* slimmer default */
+  font-size: 0.95rem !important;
+  border-radius: 10px !important;
+}
+@media (max-width: 520px) {
+  .t-toolbar .btn,
+  .t-toolbar button,
+  .t-toolbar .input,
+  .t-toolbar .input-lg { width: 100%; max-width: none; }
+  #myQuizzes .card > div[style*="display:flex"] .btn {
+    flex: 1 1 100%;
+    padding: 10px 14px !important;
+    font-size: 1rem !important;
+  }
+}
+/* Ensure button text is centered even when full-width */
+button, .btn, .button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* ---------- Layout containers & gutters ---------- */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.page-gutter { padding-left: 24px; padding-right: 24px; }
+
+/* Safety net if .container/.page-gutter weren’t added */
+@media (max-width: 768px) {
+  html, body { width: 100%; }
+  body { padding-left: 14px; padding-right: 14px; }
+  .container { padding-left: 18px; padding-right: 18px; }
+  .page-gutter { padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 480px) {
+  body { padding-left: 12px; padding-right: 12px; }
+  .container { padding-left: 16px; padding-right: 16px; }
+  .page-gutter { padding-left: 16px; padding-right: 16px; }
+}
+
+/* ---------- Header / Greeting ---------- */
+.t-home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.t-home-header h1,
+#teacherGreeting {
+  color: var(--heading);
+  margin: 0 0 6px 0;
+  font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2.1rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;   /* long names never overflow */
+}
+.t-home-sub { color: var(--muted); margin-top: 6px; }
+@media (max-width: 720px) {
+  .t-home-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+/* ---------- Toolbar (search + actions) ---------- */
+.t-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 18px 0 8px;
+}
+.input,
+.input-lg {
+  width: 100%;
+  max-width: 420px;
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.input-lg { padding: 14px 16px; max-width: 520px; }
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--brand-2), var(--brand-2));
+  border-color: rgba(255,255,255,.14);
+}
+button:hover, .btn:hover { background: var(--card-hover-bg); }
+.btn-primary:hover { filter: brightness(1.05); }
+button:active, .btn:active { transform: translateY(1px); }
+
+/* ---------- Sections ---------- */
+.section { margin: 24px 0; }
+h2, h3 { color: var(--heading); margin: 0 0 12px 0; }
+
+/* ---------- My Quizzes (rendered by JS into #myQuizzes) ---------- */
+/* Responsive grid: 1–N columns with consistent gaps */
+#myQuizzes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Card shell: consistent internal spacing + baseline min-height */
+#myQuizzes .card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin: 0;                            /* grid handles spacing */
+  min-height: 200px;                    /* <-- KEEP CARDS CONSISTENT */
+  display: flex;                        /* allow vertical layout inside */
+}
+/* The JS puts one wrapper div inside .card; make it a vertical layout */
+#myQuizzes .card > div {
+  display: flex !important;
+  flex-direction: column !important;    /* stack info + actions */
+  gap: 12px;
+  width: 100%;
+}
+/* First inner block = info (title/desc/meta) should grow */
+#myQuizzes .card > div > div:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+/* Last inner block = actions; anchor it to the bottom on small screens */
+#myQuizzes .card > div > div:last-child {
+  margin-top: auto;
+}
+/* On wider screens, allow side-by-side if you prefer that look */
+@media (min-width: 980px) {
+  #myQuizzes .card { min-height: 190px; }
+  #myQuizzes .card > div {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #myQuizzes .card > div > div:first-child { flex: 1 1 auto; }
+  #myQuizzes .card > div > div:last-child { margin-top: 0; }
+}
+
+/* Title/description: clamp so long text doesn’t make taller cards */
+#myQuizzes .card h3 {
+  margin: 0 0 6px 0;
+  color: var(--heading);
+  font-size: clamp(1.05rem, 1rem + .5vw, 1.25rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#myQuizzes .card .small { font-size: .92rem; color: var(--muted); }
+
+/* Description div in JS has inline style opacity:.7 — clamp to 2 lines */
+#myQuizzes .card .small[style*="opacity:.7"] {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;                /* show 2 lines max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.6em;                    /* reserve room for two lines */
+}
+
+/* Action row: JS sets display:flex; make it wrap neatly and align right on wide screens */
+#myQuizzes .card > div[style*="display:flex"] {
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+@media (min-width: 980px) {
+  #myQuizzes .card > div[style*="display:flex"] {
+    justify-content: flex-end;
+  }
+}
+
+/* Prevent long strings from breaking layouts */
+#myQuizzes .card, #myQuizzes .card * {
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Optional grids (if used elsewhere) ---------- */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+}
+@media (max-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 720px) {
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* ---------- Empty state ---------- */
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px 10px;
+  border: 1px dashed var(--card-border);
+  border-radius: var(--radius);
+  margin: 18px 0;
+}
+
+/* ---------- Utility margins ---------- */
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.mt-20 { margin-top: 20px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-20 { margin-bottom: 20px; }
+
+/* ===== Responsive Teacher Greeting ===== */
+/* Works whether it's <h1 id="teacherGreeting"> or <h2 id="teacherGreeting"> */
+#teacherGreeting {
+  /* Scale smoothly from phones to desktop */
+  font-size: clamp(1.15rem, 0.9rem + 1.6vw, 2.25rem);
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  color: var(--heading);
+
+  /* Never overflow on long names/emails */
+  overflow-wrap: anywhere;     /* modern wrap for long tokens */
+  word-break: break-word;      /* fallback */
+  text-wrap: balance;          /* nicer multi-line headings (supported in modern browsers) */
+
+  /* Keep within layout on very narrow screens */
+  max-width: 100%;
+}
+
+/* If you’re keeping the header wrapper from earlier */
+.t-home-header #teacherGreeting {
+  margin-bottom: 6px;
+}
+
+/* Fine-tune for breakpoints */
+@media (max-width: 720px) {
+  #teacherGreeting {
+    font-size: clamp(1.2rem, 1rem + 1.2vw, 1.6rem);
+  }
+}
+@media (max-width: 480px) {
+  #teacherGreeting {
+    font-size: clamp(1.1rem, 0.95rem + 1vw, 1.45rem);
+  }
+}
+
+.t-name { font-weight: 600; }
+
+/* ===============================
+   Teacher Dashboard – Responsive
+   (targets actual markup in teacher-dashboard.html)
+   =============================== */
+
+/* 1) Restore gutters on this page even if base.css zeroed them */
+body > main.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 24px) !important;
+}
+
+/* 2) Two-column layout -> single column on tablets/phones */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+}
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar {
+    position: static;           /* disable sticky on small screens */
+    top: auto;
+    height: auto;
+  }
+}
+
+/* 3) Sidebar polish on small screens */
+.sidebar .nav-list { gap: 6px; }
+@media (max-width: 640px) {
+  .sidebar { padding: 12px; }
+  .sidebar .nav-list a { padding: 10px 12px; }
+}
+
+/* 4) KPI cards look good across sizes */
+.kpi {
+  display: grid;
+  gap: 6px;
+  justify-items: center;
+  text-align: center;
+}
+.kpi .value {
+  font-size: clamp(1.4rem, 1rem + 2vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--heading);
+}
+.grid.cards { gap: 18px; } /* you already use auto-fit/minmax in HTML */
+
+/* 5) “Recent Attempts” table – horizontal scroll on small screens */
+.table#recentAttempts {
+  display: block;           /* allow overflow scroll */
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+}
+.table#recentAttempts thead,
+.table#recentAttempts tbody,
+.table#recentAttempts tr {
+  display: table;           /* keep table semantics inside the scroll container */
+  width: 100%;
+  table-layout: fixed;
+}
+.table#recentAttempts th,
+.table#recentAttempts td {
+  min-width: 120px;         /* prevent squish */
+  white-space: nowrap;
+}
+
+/* 6) Charts – fluid size with sensible heights */
+#tQuizzesOverTime,
+#tAttemptStatus,
+#tAvgScore {
+  display: block;
+  width: 100% !important;
+  height: 320px !important;    /* Chart.js uses this when maintainAspectRatio:false */
+}
+@media (max-width: 640px) {
+  #tQuizzesOverTime,
+  #tAttemptStatus,
+  #tAvgScore { height: 260px !important; }
+}
+
+/* 7) Card polish and spacing */
+.section { margin: 20px 0; }
+.card .container { padding: 16px; text-align: initial; }  /* override the “center” text in some cards */
+
+/* 8) Buttons – comfy on mobile */
+body > main .btn,
+body > main button {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 560px) {
+  body > main .btn { width: 100%; }
+}
+
+/* 9) Prevent any horizontal scrolling caused by wide content */
+html, body { overflow-x: hidden; }
+
+/* 10) Long text/IDs/URLs never break layout */
+body > main .break-anywhere,
+#recentAttempts,
+#recentAttempts td,
+#recentAttempts th {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+/* ===========================================
+   Dashboard → Recent Attempts: wrap, don't overlap
+   (lightweight + keeps page responsive)
+   =========================================== */
+
+/* 1) Reset to a real table (undo block/scroll hack) */
+.table#recentAttempts {
+  display: table !important;
+  width: 100% !important;
+  table-layout: auto !important;
+  border-collapse: collapse !important;
+  overflow: visible !important;   /* no forced scroll container */
+}
+
+/* 2) Allow wrapping so text never overlaps neighboring cells */
+.table#recentAttempts th,
+.table#recentAttempts td {
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  vertical-align: top;
+  min-width: 0;                   /* allow shrink */
+  max-width: 1px;                 /* enables wrap in some engines */
+  font-size: 0.95rem;
+}
+
+/* 3) Tighten padding a bit on phones so rows stay readable */
+@media (max-width: 560px) {
+  .table#recentAttempts th,
+  .table#recentAttempts td {
+    padding: 8px 10px;
+    font-size: 0.92rem;
+  }
+}
+
+/* 4) Hide less-critical columns on small screens
+   ⚠️ Adjust nth-childs to match your column order.
+   Example assumes:
+   1: Student • 2: Quiz • 3: Score • 4: Status • 5: Date • 6: Duration
+*/
+@media (max-width: 640px) {
+  .table#recentAttempts th:nth-child(5),
+  .table#recentAttempts td:nth-child(5),
+  .table#recentAttempts th:nth-child(6),
+  .table#recentAttempts td:nth-child(6) {
+    display: none;
+  }
+}
+/* Super narrow phones: keep only first 3 columns */
+@media (max-width: 420px) {
+  .table#recentAttempts th:nth-child(4),
+  .table#recentAttempts td:nth-child(4) {
+    display: none;
+  }
+}
+
+/* ===============================
+   Teacher Dashboard: hero text fixes (light mode)
+   =============================== */
+
+/* If your dashboard lives in main.container, keep it scoped there */
+:root[data-theme="light"] body > main.container .hero h1,
+:root[data-theme="light"] body > main.container .hero h2,
+:root[data-theme="light"] body > main.container .hero .welcome-title {
+  color: var(--heading) !important;
+}
+
+:root[data-theme="light"] body > main.container .hero p,
+:root[data-theme="light"] body > main.container .hero .muted,
+:root[data-theme="light"] body > main.container .hero .subtext {
+  color: var(--muted) !important;
+}
+
+/* Fallback: if your “welcome back” block isn’t inside .hero, apply to first section */
+:root[data-theme="light"] body > main.container section:first-of-type h1,
+:root[data-theme="light"] body > main.container section:first-of-type h2 {
+  color: var(--heading) !important;
+}
+:root[data-theme="light"] body > main.container section:first-of-type p {
+  color: var(--muted) !important;
+}
+
+/* Safety: neutralize any generic white text utility on light theme (if present) */
+:root[data-theme="light"] .text-white { color: var(--heading) !important; }
+
+/* ================================
+   Teacher Dashboard — Recent Attempts
+   Force scroll after 5 rows (CSS-only)
+   ================================ */
+
+/* Tunables */
+:root {
+  --recentAttempts-rows: 5;      /* show this many rows before scrolling */
+  --recentAttempts-row-h: 56px;  /* approximate row height incl. padding */
+}
+
+/* Make sure our table can show its internal scrollbar */
+#recentAttempts.table,
+#recentAttempts {
+  table-layout: fixed !important;          /* stable column widths */
+  border-collapse: collapse !important;
+  overflow: visible !important;            /* defeat .table { overflow:hidden } */
+  width: 100%;
+}
+
+/* Keep header laid out like a table */
+#recentAttempts thead {
+  display: table !important;
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+
+/* BODY becomes the scrollable block */
+#recentAttempts tbody {
+  display: block !important;               /* isolate body so it can scroll */
+  max-height: calc(var(--recentAttempts-rows) * var(--recentAttempts-row-h)) !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Each body row still behaves like a table row */
+#recentAttempts tbody tr {
+  display: table !important;
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+
+/* Cell safety: wrap long text so nothing overlaps */
+#recentAttempts th,
+#recentAttempts td {
+  padding: 10px 12px;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Nice, theme-aware header while body scrolls */
+#recentAttempts thead th {
+  background: color-mix(in srgb, var(--bg), transparent 6%);
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* Optional: slimmer scrollbar inside the table body */
+#recentAttempts tbody::-webkit-scrollbar { width: 6px; }
+#recentAttempts tbody::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
+#recentAttempts tbody::-webkit-scrollbar-thumb:hover { background: var(--brand-2); }

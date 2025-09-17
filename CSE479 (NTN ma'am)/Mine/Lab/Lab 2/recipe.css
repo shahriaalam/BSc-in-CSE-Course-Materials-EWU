@@ -1,0 +1,81 @@
+body{
+}
+
+.first_part h1{
+    
+    display: flex;
+    justify-content: center;
+    background-color: #F0F0F0;
+    color: #A4A400;
+    font-family: 'Lucida Sans Unicode';
+    font-size: 22px;
+}
+
+.first_part p{
+    color: #404040;
+    font-family: 'Georgia';
+    font-size: 11px;
+}
+
+.sec_part_title h1{
+    background-color: #F0F0F0;
+    color: #A4A400;
+    font-family: 'Lucida Sans Unicode';
+    font-size: 18px;
+}
+.sec_part_title ul {
+  font-family: 'Georgia';
+    font-size: 11px;
+}
+.sec_part_2_title h1{
+    background-color: #F0F0F0;
+    color: #A4A400;
+    font-family: 'Lucida Sans Unicode';
+    font-size: 18px;
+}
+
+.sec_part_2_title ol {
+  font-family: 'Georgia';
+    font-size: 11px;
+}
+
+.sec_part_2_title p{
+    font-family: 'Georgia';
+    font-size: 11px;
+}
+
+.sec_part_user h1{
+    background-color: #F0F0F0;
+    color: #A4A400;
+    font-family: 'Lucida Sans Unicode';
+    font-size: 18px;
+}
+.sec_part_user ul {
+  list-style-type: none;
+  font-family: 'Georgia';
+    font-size: 11px;
+}
+
+.sec_part_user ul li{
+    font-family: 'Georgia';
+    font-size: 11px;
+    background-color:#FFFFA8 ;
+}
+
+.sec_part_user_2 h1{
+    background-color: #F0F0F0;
+    color: #A4A400;
+    font-family: 'Lucida Sans Unicode';
+    font-size: 18px;
+}
+.sec_part_user_2 p {
+    color: #A4A400;
+  list-style-type: none;
+  font-family: 'Georgia';
+    font-size: 11px;
+}
+
+.copy{
+    font-family: 'Georgia';
+    font-size: 11px;
+}

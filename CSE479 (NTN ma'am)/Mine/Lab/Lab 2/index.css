@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.front_img img{
+    width: auto;
+    position: relative;
+}
+
+.front_img{
+    display: flex;
+    justify-content: center;
+}
+
+.Resturant_name{
+     display: flex;
+    justify-content: center;
+}
+
+
+
+.button_menu {
+width: 200px;
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button_menu:hover,
+.button_menu:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button_div{
+     display: flex;
+    justify-content: center;
+}
+
+
+
+
+/*---------------------------footer section-------------*/
+
+footer {
+    padding: 1rem 1%;
+}
+
+#contact {
+    background-color: #FF4742;
+    height: auto;
+    
+}
+.footer{
+    height: 100px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 7rem;
+}
+
+.f-container h2 {
+    font-size: 2rem;
+    color: white;
+    
+}
+
+.f-container a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 0;
+    display: block;
+}
+
+.f-container a:hover {
+    transform: translateX(.5rem);
+    transition: .5s ease;
+}
+
+.f-container i {
+    color: white;
+}
+
+.f-container p {
+    font-size: 1.5rem;
+    color: white;
+}
