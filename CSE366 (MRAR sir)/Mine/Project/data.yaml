@@ -1,0 +1,6 @@
+train: /content/drive/MyDrive/Project/Chemical Lab Data/train/images
+val: /content/drive/MyDrive/Project/Chemical Lab Data/valid/images
+test: /content/drive/MyDrive/Project/Chemical Lab Data/test/images
+
+nc: 7
+names: ['hand', 'conical beaker', 'erlenmeyer flask', 'reagent bottle', 'pipette', 'eggplant shaped flask', 'separatory funnel']

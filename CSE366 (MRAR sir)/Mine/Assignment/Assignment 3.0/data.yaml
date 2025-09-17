@@ -1,0 +1,6 @@
+train: /content/drive/MyDrive/Assignment 3/TomatoData/train/images
+val: /content/drive/MyDrive/Assignment 3/TomatoData/valid/images
+test: /content/drive/MyDrive/Assignment 3/TomatoData/test/images
+
+nc: 2
+names: ['green', 'red']
