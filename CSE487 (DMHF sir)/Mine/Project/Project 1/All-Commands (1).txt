@@ -1,0 +1,759 @@
+CA Configure
+_____________
+
+1. Preparing the environment
+Moving to the root using
+---------------------------
+sudo -i
+
+Creating directory:
+--------------------
+mkdir -p ca/{root-ca,sub-ca,server}/{private,certs,newcerts,crl,csr}
+
+Changing the root of ca and sub ca private folder
+---------------------------------------------------
+chmod -v 700 ca/{root-ca,sub-ca,server}/private
+
+Creating file index in both root ca and sub ca
+------------------------------------------------
+touch ca/{root-ca,sub-ca}/index
+
+writing serial number of root ca
+----------------------------------
+openssl rand -hex 16 > ca/root-ca/serial
+
+writing serial number of sub ca
+-------------------------------
+openssl rand -hex 16 > ca/sub-ca/serial
+
+moving to ca directory
+----------------------
+cd ca
+
+
+
+
+2. Generating private key for root ca, sub ca and server
+Public key for rootCA
+----------------------
+openssl genrsa -aes256 -out root-ca/private/ca.key 4096
+
+
+Public key for subCA
+---------------------
+openssl genrsa -aes256 -out sub-ca/private/sub-ca.key 4096
+
+Public key for server
+----------------------
+openssl genrsa -out server/private/server.key 2048
+
+
+3. Generating certificates
+
+Root-CA
+
+Creating root ca.config
+--------------------------
+gedit root-ca/root-ca.conf
+
+Inserting the code from the link into the root-ca.config
+------------------------------------------------------------
+ (root-ca.conf code at the bottom)
+
+Save and exit
+
+:wq
+
+tree
+
+Moving inside root-ca
+-----------------------
+cd root-ca
+
+Generating root ca certificate
+--------------------------------
+openssl req -config root-ca.conf -key private/ca.key -new -x509 -days 7305 -sha256 -extensions v3_ca -out certs/ca.crt
+
+Ensuring that the certificate has been created properly
+--------------------------------------------------------
+openssl x509 -noout -in certs/ca.crt -text
+
+
+Moving a step back and then to sub-ca
+-------------------------------------
+cd ../sub-ca
+
+Sub-CA
+Creating sub-ca.config
+------------------------
+gedit sub-ca.conf
+
+Inserting the code into sub-ca.config file
+------------------------------------------
+ (sub-ca.conf code at the bottom)
+
+Saving and exiting
+
+:wq
+
+Requesting for sub ca certificate signing request.
+--------------------------------------------------
+openssl req -config sub-ca.conf -new -key private/sub-ca.key -sha256 -out csr/sub-ca.csr
+
+moving to the previous folder
+----------------------------
+cd -
+
+Signing the request of sub ca by root ca
+-----------------------------------------
+openssl ca -config root-ca.conf -extensions v3_intermediate_ca -days 3652 -notext -in ../sub-ca/csr/sub-ca.csr -out ../sub-ca/certs/sub-ca.crt
+
+to confirm insert 
+
+pem file has been generated
+
+See the signing
+--------------------
+cat index
+
+→Root ca signed sub ca
+Seeing detail
+--------------------------
+openssl x509 -noout -text -in ../sub-ca/certs/sub-ca.crt
+
+4. Configuring server
+Moving to server
+---------------------
+cd ../server
+
+Generating certificate signing request from server
+--------------------------------------------------
+openssl req -key private/server.key -new -sha256 -out csr/server.csr
+
+moving to sub ca to sign the server’s certificate
+------------------------------------------------------
+cd ../sub-ca
+
+Sub ca signing certificate request of server
+--------------------------------------------------
+openssl ca -config sub-ca.conf -extensions server_cert -days 365 -notext -in ../server/csr/server.csr -out ../server/certs/server.crt
+
+seeing detail
+--------------
+cat index
+
+echo "127.0.0.2 www.verysecureserver.com" >> /etc/hosts
+ping www.verysecureserver.com
+
+
+copy to newcerts directory
+--------------------------------------
+cp /root/ca/root-ca/certs/ca.crt /home/rizvee/certificate
+cp /root/ca/sub-ca/certs/sub-ca.crt /home/rizvee/certificate/
+cp /root/ca/server/certs/server.crt /home/rizvee/certificate/
+cp /root/ca/server/private/server.key /home/rizvee/certificate/
+
+
+Next go to this location
+--------------------------------------------
+sudo -i
+cd /opt/lampp/etc/extra
+chmod 777 httpd-ssl.conf 
+gedit httpd-ssl.conf
+
+line 106
+---------
+change server.crt location with your server.crt file location
+{106 SSLCertificateFile "/home/rizvee/certificate/server.crt"}
+
+line 116
+---------
+change server.key location with your server.key file location
+{116 SSLCertificateKeyFile "/home/rizvee/certificate/server.key"}
+
+line 136
+---------
+change full line with your location
+{136 SSLCACertificatePath "/home/rizvee/certificate"}
+
+
+__________________________________________________________________________________________________________________
+DNS Configure
+__________________________________________________________________________________________________________________
+
+cd /etc/bind
+gedit /etc/hosts
+
+---------------------------------------------------------------------------
+[After the command edit next]
+
+192.168.4.7	rizvee-VirtualBox.rhp.com	rizvee-VirtualBox
+
+[save and exit]
+
+-----------------------------------------------------------------------------
+
+hostname
+dnsdomainname
+hostname --fqdn
+
+cp named.conf.options named.conf.options.orig
+gedit named.conf.options
+
+[After the command edit next]
+
+	//========================================================================
+	dnssec-validation auto;
+	listen-on-v6 { any; };
+	recursion yes;
+	listen-on{192.168.4.7;};
+	allow-transfer {none;};
+	
+	forwarders {
+	192.168.0.1;
+
+	};
+
+[save and exit]
+
+cp named.conf.local named.conf.local.orig
+gedit named.conf.local
+
+-------------------------------------------------------------------------------------
+[After the command edit next]
+
+//forward lookup zone
+zone "rhp.com" IN{
+	type master;
+	file "/etc/bind/db.rhp.com";
+};
+
+//reverse lookup zone
+zone "4.168.192.in-addr.arpa" IN {
+	type master;
+	file "/etc/bind/db.4.168.192";
+};
+
+[save and exit]
+-------------------------------------------------------------------------------------
+
+named-checkconf
+ls
+# cat named.conf.local
+cp db.local db.rhp.com
+gedit db.rhp.com
+
+------------------------------------------------------------------------------------
+[Replace full file with that text]
+
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ns1.rhp.com. root.rhp.com. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns1.rhp.com.
+ns1	IN	A	192.168.0.20
+www	IN	A	192.168.0.20
+@	IN	AAAA	::1
+[Save and exit]
+-------------------------------------------------------------------------------------
+
+named-checkzone rhp.com db.rhp.com
+cp db.127 db.4.168.192
+gedit db.4.168.192
+
+-------------------------------------------------------------------------------------
+[Replace full file with that text]
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ns1.rhp.com. root.rhp.com. (
+			      1			; Serial
+			 604800			; Refresh
+			  86400			; Retry
+			2419200			; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns1.rhp.com.
+24	IN	PTR	ns1.rhp.com.
+24	IN	PTR	www.rhp.com.
+
+[Save and exit]
+------------------------------------------------------------------------------------
+
+named-checkzone 4.168.192.in-addr.arpa db.4.168.192
+named-checkconf
+named-checkzone rhp.com db.rhp.com
+named-checkzone 4.168.192.in-addr.arpa db.4.168.192
+
+service bind9 restart
+service bind9 status
+
+nslookup www.rhp.com
+
+gedit /etc/resolv.conf
+
+-----------------------------------------
+[Replace last line with that text]
+
+nameserver 192.168.4.7
+search localdomain
+
+[Save and exit]
+-----------------------------------------
+
+nslookup www.rhp.com
+ping www.rhp.com
+
+
+
+____________________________________________________________________________________________________________
+FireWall Setup
+____________________________________________________________________________________________________________
+1.Install ufw package
+
+sudo apt install ufw
+
+2.Set default rules for ufw firewall
+ufw default allow outgoing
+ufw default deny incoming
+
+3. Enable ssh
+ufw allow ssh
+
+4. Enable ufw
+ufw enable
+
+
+5.Allow port 80 (http), 443(https), and 53(DNS)
+ufw allow 80
+ufw allow 443
+ufw allow 53
+
+______________________________________________________________________________________________________________
+SNORT
+______________________________________________________________________________________________________________
+sudo apt-get intall snort -y
+ens33
+192.168.1.0/24
+backspace
+OK 
+
+In /etc/snort:
+gedit snort.conf
+==
+51
+ipvar HOME_NET any
+ipvar HOME_NET 192.168.4.7/16
+==
+
+
+snort -T -c /etc/snort/snort.conf
+snort -A console -q -c /etc/snort/snort.conf
+
+In attack machine:
+nmap 192.168.4.9 (testing)
+ping 192.168.4.9
+==
+cd /etc/snort/rules
+gedit local.rules
+
+https://github.com/maj0rmil4d/snort-ddos-mitigation/blob/main/dos.rules
+
+alert tcp any any -> $HOME_NET any (flags:S; msg:"DoS attack happening"; flow:stateless;
+detection_filter:track by_dst,count 70,Seconds 10; sid:1000001; rev:1;)
+
+==
+apt install hping3 {for ddos attack}
+hping3 192.168.56.101 -q -n -d 120 -S -p 80 --flood --rand-source
+
+################################################################################################################
+ROOT-CA File
+################################################################################################################
+
+[ca]
+
+#/root/ca/root-ca/root-ca.conf
+
+#see man ca
+
+default_ca    = CA_default
+
+ 
+
+[CA_default]
+
+dir     = /root/ca/root-ca
+
+certs     =  $dir/certs
+
+crl_dir    = $dir/crl
+
+new_certs_dir   = $dir/newcerts
+
+database   = $dir/index
+
+serial    = $dir/serial
+
+RANDFILE   = $dir/private/.rand
+
+ 
+
+private_key   = $dir/private/ca.key
+
+certificate   = $dir/certs/ca.crt
+
+ 
+
+crlnumber   = $dir/crlnumber
+
+crl    =  $dir/crl/ca.crl
+
+crl_extensions   = crl_ext
+
+default_crl_days    = 30
+
+ 
+
+default_md   = sha256
+
+ 
+
+name_opt   = ca_default
+
+cert_opt   = ca_default
+
+default_days   = 365
+
+preserve   = no
+
+policy    = policy_strict
+
+ 
+
+[ policy_strict ]
+
+countryName   = supplied
+
+stateOrProvinceName  =  supplied
+
+organizationName  = match
+
+organizationalUnitName  =  optional
+
+commonName   =  supplied
+
+emailAddress   =  optional
+
+ 
+
+[ policy_loose ]
+
+countryName   = optional
+
+stateOrProvinceName  = optional
+
+localityName   = optional
+
+organizationName  = optional
+
+organizationalUnitName   = optional
+
+commonName   = supplied
+
+emailAddress   = optional
+
+ 
+
+[ req ]
+
+# Options for the req tool, man req.
+
+default_bits   = 2048
+
+distinguished_name  = req_distinguished_name
+
+string_mask   = utf8only
+
+default_md   =  sha256
+
+# Extension to add when the -x509 option is used.
+
+x509_extensions   = v3_ca
+
+ 
+
+[ req_distinguished_name ]
+
+countryName                     = Country Name (2 letter code)
+
+stateOrProvinceName             = State or Province Name
+
+localityName                    = Locality Name
+
+0.organizationName              = Organization Name
+
+organizationalUnitName          = Organizational Unit Name
+
+commonName                      = Common Name
+
+emailAddress                    = Email Address
+
+countryName_default  = BD
+
+stateOrProvinceName_default = Dhaka
+
+0.organizationName_default = ATMS
+
+ 
+
+[ v3_ca ]
+
+# Extensions to apply when createing root ca
+
+# Extensions for a typical CA, man x509v3_config
+
+subjectKeyIdentifier  = hash
+
+authorityKeyIdentifier  = keyid:always,issuer
+
+basicConstraints  = critical, CA:true
+
+keyUsage   =  critical, digitalSignature, cRLSign, keyCertSign
+
+ 
+
+[ v3_intermediate_ca ]
+
+# Extensions to apply when creating intermediate or sub-ca
+
+# Extensions for a typical intermediate CA, same man as above
+
+subjectKeyIdentifier  = hash
+
+authorityKeyIdentifier  = keyid:always,issuer
+
+#pathlen:0 ensures no more sub-ca can be created below an intermediate
+
+basicConstraints  = critical, CA:true, pathlen:0
+
+keyUsage   = critical, digitalSignature, cRLSign, keyCertSign
+
+ 
+
+[ server_cert ]
+
+# Extensions for server certificates
+
+basicConstraints  = CA:FALSE
+
+nsCertType   = server
+
+nsComment   =  "OpenSSL Generated Server Certificate"
+
+subjectKeyIdentifier  = hash
+
+authorityKeyIdentifier  = keyid,issuer:always
+
+keyUsage   =  critical, digitalSignature, keyEncipherment
+
+extendedKeyUsage  = serverAuth
+
+
+###############################################################################################################
+SUB-CA File
+###############################################################################################################
+[ca]
+
+#/root/ca/sub-ca/sub-ca.conf
+
+#see man ca
+
+default_ca    = CA_default
+
+ 
+
+[CA_default]
+
+dir     = /root/ca/sub-ca
+
+certs     =  $dir/certs
+
+crl_dir    = $dir/crl
+
+new_certs_dir   = $dir/newcerts
+
+database   = $dir/index
+
+serial    = $dir/serial
+
+RANDFILE   = $dir/private/.rand
+
+ 
+
+private_key   = $dir/private/sub-ca.key
+
+certificate   = $dir/certs/sub-ca.crt
+
+ 
+
+crlnumber   = $dir/crlnumber
+
+crl    =  $dir/crl/ca.crl
+
+crl_extensions   = crl_ext
+
+default_crl_days    = 30
+
+ 
+
+default_md   = sha256
+
+ 
+
+name_opt   = ca_default
+
+cert_opt   = ca_default
+
+default_days   = 365
+
+preserve   = no
+
+policy    = policy_loose
+
+ 
+
+[ policy_strict ]
+
+countryName   = supplied
+
+stateOrProvinceName  =  supplied
+
+organizationName  = match
+
+organizationalUnitName  =  optional
+
+commonName   =  supplied
+
+emailAddress   =  optional
+
+ 
+
+[ policy_loose ]
+
+countryName   = optional
+
+stateOrProvinceName  = optional
+
+localityName   = optional
+
+organizationName  = optional
+
+organizationalUnitName   = optional
+
+commonName   = supplied
+
+emailAddress   = optional
+
+ 
+
+[ req ]
+
+# Options for the req tool, man req.
+
+default_bits   = 2048
+
+distinguished_name  = req_distinguished_name
+
+string_mask   = utf8only
+
+default_md   =  sha256
+
+# Extension to add when the -x509 option is used.
+
+x509_extensions   = v3_ca
+
+ 
+
+[ req_distinguished_name ]
+
+countryName                     = Country Name (2 letter code)
+
+stateOrProvinceName             = State or Province Name
+
+localityName                    = Locality Name
+
+0.organizationName              = Organization Name
+
+organizationalUnitName          = Organizational Unit Name
+
+commonName                      = Common Name
+
+emailAddress                    = Email Address
+
+countryName_default  = BD
+
+stateOrProvinceName_default = Dhaka
+
+0.organizationName_default = ATMS
+
+ 
+
+[ v3_ca ]
+
+# Extensions to apply when createing root ca
+
+# Extensions for a typical CA, man x509v3_config
+
+subjectKeyIdentifier  = hash
+
+authorityKeyIdentifier  = keyid:always,issuer
+
+basicConstraints  = critical, CA:true
+
+keyUsage   =  critical, digitalSignature, cRLSign, keyCertSign
+
+ 
+
+[ v3_intermediate_ca ]
+
+# Extensions to apply when creating intermediate or sub-ca
+
+# Extensions for a typical intermediate CA, same man as above
+
+subjectKeyIdentifier  = hash
+
+authorityKeyIdentifier  = keyid:always,issuer
+
+#pathlen:0 ensures no more sub-ca can be created below an intermediate
+
+basicConstraints  = critical, CA:true, pathlen:0
+
+keyUsage   = critical, digitalSignature, cRLSign, keyCertSign
+
+ 
+
+[ server_cert ]
+
+# Extensions for server certificates
+
+basicConstraints  = CA:FALSE
+
+nsCertType   = server
+
+nsComment   =  "OpenSSL Generated Server Certificate"
+
+subjectKeyIdentifier  = hash
+
+authorityKeyIdentifier  = keyid,issuer:always
+
+keyUsage   =  critical, digitalSignature, keyEncipherment
+
+extendedKeyUsage  = serverAuth

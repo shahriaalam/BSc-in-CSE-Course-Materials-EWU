@@ -1,0 +1,143 @@
+CREATE TABLE Student (
+    StudentID INT,
+    Name VARCHAR(50),
+    Age INT
+);
+
+INSERT INTO Student (StudentID, Name, Age) VALUES
+(101, 'John', 22);
+INSERT INTO Student (StudentID, Name, Age) VALUES(102, 'Alice', 21);
+INSERT INTO Student (StudentID, Name, Age) VALUES(103, 'Bob', 23);
+INSERT INTO Student (StudentID, Name, Age) VALUES(104, 'Charlie', 20);
+
+CREATE INDEX idx_primary ON Student(StudentID);
+SHOW INDEXES FROM Student;
+select index_name, table_name, uniqueness, status
+from user_indexes
+where table_name = 'Student';
+
+select DBMS_METADATA.GET_DDL('INDEX' , 'idx_primary') as index_ddl from Student;
+
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(50)
+);
+
+INSERT INTO Employee (EmployeeID, Name, Department) VALUES
+(1, 'John', 'HR');
+INSERT INTO Employee (EmployeeID, Name, Department) VALUES(2, 'Alice', 'IT');
+INSERT INTO Employee (EmployeeID, Name, Department) VALUES(3, 'Bob', 'Finance');
+INSERT INTO Employee (EmployeeID, Name, Department) VALUES(4, 'Charlie', 'IT');
+CREATE INDEX idx_department ON Employee(Department);
+SHOW INDEXES FROM Employee;
+select index_name, table_name, uniqueness, status
+from idx_department
+where table_name = 'Employee';
+
+select index_name, column_name, column_position
+From user_ind_columns
+where index_name = 'idx_department';
+
+explain plan for select * from Employee where Department ='IT';      
+select * from Employee (DBMS_XPLAN.Display()); 
+
+
+
+CREATE TABLE Product (
+    ProductID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Price DECIMAL(10, 2)
+);
+
+INSERT INTO Product (ProductID, Name, Price) VALUES
+(101, 'Laptop', 799.99),
+(102, 'Phone', 599.99),
+(103, 'Tablet', 299.99),
+(104, 'Monitor', 199.99);
+
+CREATE INDEX idx_dense ON Product(ProductID);
+SHOW INDEXES FROM Product;
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    OrderDate DATE
+);
+
+INSERT INTO Orders (OrderID, CustomerID, OrderDate) VALUES
+(1, 101, '2024-01-15'),
+(2, 102, '2024-02-10'),
+(3, 103, '2024-03-22'),
+(4, 101, '2024-04-19');
+
+CREATE INDEX idx_sparse ON Orders(CustomerID) WHERE CustomerID = 101;
+SHOW INDEXES FROM Orders;
+
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(100),
+    Author VARCHAR(100)
+);
+
+INSERT INTO Books (BookID, Title, Author) VALUES
+(1, 'The Great Gatsby', 'F. Scott Fitzgerald'),
+(2, '1984', 'George Orwell'),
+(3, 'To Kill a Mockingbird', 'Harper Lee'),
+(4, 'The Catcher in the Rye', 'J.D. Salinger');
+
+Part-2: Analyzing Optimization Techniques
+
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10, 2),
+    stock_quantity INT
+);
+
+INSERT INTO products (product_id, product_name, category, price, stock_quantity) VALUES
+(1, 'Laptop', 'Electronics', 1200.00, 50),
+(2, 'Phone', 'Electronics', 800.00, 200),
+(3, 'Tablet', 'Electronics', 500.00, 150),
+(4, 'Headphones', 'Accessories', 100.00, 300),
+(5, 'Monitor', 'Electronics', 300.00, 75);
+
+EXPLAIN ANALYZE 
+SELECT * FROM products 
+WHERE category = 'Electronics';
+
+EXPLAIN ANALYZE 
+SELECT * FROM products 
+WHERE product_id = 3;
+
+CREATE INDEX idx_category ON products(category);
+
+EXPLAIN ANALYZE 
+SELECT * FROM products 
+WHERE category = 'Electronics';
+
+CREATE INDEX idx_price_dense ON products(price);
+
+EXPLAIN ANALYZE 
+SELECT * FROM products 
+WHERE price = 800.00;
+
+CREATE INDEX idx_stock_sparse ON products(stock_quantity);
+
+EXPLAIN ANALYZE 
+SELECT * FROM products 
+WHERE stock_quantity > 100;
+
+SHOW INDEX FROM products;
+
+EXPLAIN ANALYZE 
+SELECT * FROM products 
+WHERE price BETWEEN 500 AND 1000;
+
+DROP INDEX idx_category;
+DROP INDEX idx_price_dense;
+DROP INDEX idx_stock_sparse;
+
+
+
