@@ -1,0 +1,47 @@
+[
+  {
+    "APPLICANT_FNAME" : "Katherine",
+    "STATUS" : "UGRAD",
+    "APPLICANT_ID" : "930182231",
+    "APPLICANT_LNAME" : "Watkins",
+    "JOB_POSTING_ID" : "3",
+    "CV" : "Experience of the student2",
+    "APPLICANT_EMAIL" : "kwatkins@ece.mcgill.com"
+  },
+  {
+    "APPLICANT_FNAME" : "Jack",
+    "STATUS" : "Ugrad",
+    "APPLICANT_ID" : "12320",
+    "APPLICANT_LNAME" : "Zhu",
+    "JOB_POSTING_ID" : "230120",
+    "CV" : "This is jack",
+    "APPLICANT_EMAIL" : "jackzhu@gmail.com"
+  },
+  {
+    "APPLICANT_FNAME" : "Bob",
+    "STATUS" : "UGRAD",
+    "APPLICANT_ID" : "99999",
+    "APPLICANT_LNAME" : "Smith",
+    "JOB_POSTING_ID" : "11111",
+    "CV" : "CV",
+    "APPLICANT_EMAIL" : "bob.smith@mail.mcgill.ca"
+  },
+  {
+    "APPLICANT_FNAME" : "Bob",
+    "STATUS" : "UGRAD",
+    "APPLICANT_ID" : "12345643",
+    "APPLICANT_LNAME" : "Cool",
+    "JOB_POSTING_ID" : "34431413",
+    "CV" : "CV",
+    "APPLICANT_EMAIL" : "email.com"
+  },
+  {
+    "APPLICANT_FNAME" : "Mark",
+    "STATUS" : "UGRAD",
+    "APPLICANT_ID" : "32103910",
+    "APPLICANT_LNAME" : "Young",
+    "JOB_POSTING_ID" : "23127301",
+    "CV" : "I am interested in applying! Experience:TA for ECSE222 and I am a graduate student.",
+    "APPLICANT_EMAIL" : "mark.young@mail.mcgill.ca"
+  }
+]

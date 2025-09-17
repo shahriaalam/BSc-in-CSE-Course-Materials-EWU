@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	color: white;
+	background-color: #FFFFFF;
+}
+h1{
+	margin-top: -10px;
+	width:400px;
+	text-align: center;
+	font-size: 50px;
+}
+h2{
+	margin-top: -20px;
+	width: 150px;
+}
+p{
+    width: 300px;
+}
+#main_div{
+	width:400px;
+	padding: 40px;
+	align-self: center;
+	margin: auto;
+	background-color:#C63D0F;
+	box-shadow: 2px 2px 4px #888888;
+}
+.text_description{
+	float: left;
+	text-align: right;
+	width: 100px;
+}
+hr{
+	float: left;
+	width: 400px;
+	color: whitesmoke;
+	margin-top: 20px;
+}
+textarea{
+	width: 400px;
+	height: 150px;
+}
+textarea:focus{
+	background: #FFF9D6;
+}
+input[type=text]:focus{
+	background: #FFF9D6;
+}
+input [type=checkbox]{
+    float:right;
+}
+select{
+    width=200px;
+    float: right;
+}
+input[type='checkbox']{
+    float:right;
+}
+
+button{
+	width:100px;
+	height: 50px;
+	background-color:#FC4A1A;
+	color:white;
+}
+.time{
+    display: inline;
+    float: right;
+}
+

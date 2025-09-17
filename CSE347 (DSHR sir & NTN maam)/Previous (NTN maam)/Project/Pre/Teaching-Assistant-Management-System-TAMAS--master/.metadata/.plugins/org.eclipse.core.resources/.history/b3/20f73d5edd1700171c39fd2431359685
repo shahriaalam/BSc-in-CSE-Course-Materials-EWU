@@ -1,0 +1,74 @@
+package ca.mcgill.ecse321.TAMAS.view;
+
+import javax.swing.GroupLayout;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JTextArea;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.io.File;
+import java.io.FilenameFilter;
+
+
+public class ECEAdminPage extends JFrame {
+	
+	JLabel welcomeLabel; 
+	JTextArea courseTextArea; 
+	JFileChooser courseFileChooser; 
+	int resultFileChooser; 
+	private File selectedFile; 
+	public ECEAdminPage() {
+		initComponents();	
+	}
+	
+	public void initComponents(){
+		getContentPane().setBackground(Color.decode("#C63D0F"));
+		
+		welcomeLabel=new JLabel("Welcome! ECEadmin please choose a file to load the course allocation into TAMAS!"); 
+		welcomeLabel.setFont(new Font("Gotham",Font.BOLD, 20));
+		welcomeLabel.setForeground(Color.white);
+		
+		courseTextArea=new JTextArea();
+		courseTextArea.setColumns(30);
+		courseTextArea.setRows(25);
+		// file chooser
+		courseFileChooser=new JFileChooser();
+		courseFileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+		resultFileChooser=courseFileChooser.showOpenDialog(this);
+		FileNameExtensionFilter filter=new FileNameExtensionFilter("JavaScript Object Notation files", "json");
+		courseFileChooser.setFileFilter(filter);
+		
+		if (resultFileChooser == JFileChooser.APPROVE_OPTION) {
+		    selectedFile = courseFileChooser.getSelectedFile();
+		    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+		}
+		
+		GroupLayout layout = new GroupLayout(getContentPane());
+		getContentPane().setLayout(layout);
+		layout.setAutoCreateGaps(true);
+	    layout.setAutoCreateContainerGaps(true);
+	    
+	    layout.setHorizontalGroup(layout.createSequentialGroup()
+	    		 
+	    		.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+	    				.addComponent(welcomeLabel))
+	    		
+	    		.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+	    				.addComponent(courseFileChooser))
+	 
+	    		);
+	    
+	    layout.setVerticalGroup(layout.createSequentialGroup()
+	    		.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+	    				.addComponent(welcomeLabel)
+	    				.addComponent(courseFileChooser))
+	    		);
+	    
+	    pack();
+		
+	}
+}

@@ -1,0 +1,17 @@
+package ca.mcgill.ecse321.TAMAS.view;
+
+import javax.swing.JLabel;
+
+public class ECEAdminPage {
+	
+	JLabel welcomeLabel; 
+	JLi
+	public ECEAdminPage() {
+		initComponents();	
+	}
+	
+	public void initComponents(){
+		
+		
+	}
+}

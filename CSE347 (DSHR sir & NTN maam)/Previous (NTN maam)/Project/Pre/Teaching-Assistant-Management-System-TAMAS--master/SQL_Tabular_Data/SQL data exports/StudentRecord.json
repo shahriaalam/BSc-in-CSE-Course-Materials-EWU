@@ -1,0 +1,66 @@
+[
+  {
+    "STATUS" : "UGRAD",
+    "LNAME" : "Java",
+    "PASSWORD" : "jamesjava123",
+    "STUDENT_ID" : "12312030",
+    "FNAME" : "James",
+    "EMAIL" : "Jame.java@java.com"
+  },
+  {
+    "STATUS" : "UGRAD",
+    "LNAME" : "Python",
+    "PASSWORD" : "1994",
+    "STUDENT_ID" : "13124",
+    "FNAME" : "James",
+    "EMAIL" : "james.python@mcgill.ca"
+  },
+  {
+    "STATUS" : "UGRAD",
+    "LNAME" : "Java",
+    "PASSWORD" : "jamesjava123",
+    "STUDENT_ID" : "12312021",
+    "FNAME" : "James",
+    "EMAIL" : "Jame.java@java.com"
+  },
+  {
+    "STATUS" : "UGRAD",
+    "LNAME" : "Haskell ",
+    "PASSWORD" : "199701286",
+    "STUDENT_ID" : "294312804",
+    "FNAME" : "Jay",
+    "EMAIL" : "jay.haskell@mcgill.ca"
+  },
+  {
+    "STATUS" : "UGRAD",
+    "LNAME" : "gog",
+    "PASSWORD" : "chicken",
+    "STUDENT_ID" : "235689",
+    "FNAME" : "bob",
+    "EMAIL" : "bobgog@gmail.com"
+  },
+  {
+    "STATUS" : "UGRAD",
+    "LNAME" : "gog",
+    "PASSWORD" : "gog",
+    "STUDENT_ID" : "123456789",
+    "FNAME" : "bijan",
+    "EMAIL" : "gkgk"
+  },
+  {
+    "STATUS" : "UGRAD",
+    "LNAME" : "Rye",
+    "PASSWORD" : "231092831",
+    "STUDENT_ID" : "222231123",
+    "FNAME" : "Jason",
+    "EMAIL" : "jason.rye@ece.mcgill.ca"
+  },
+  {
+    "STATUS" : "UGRAD",
+    "LNAME" : "tang",
+    "PASSWORD" : "3182-381-2083-01",
+    "STUDENT_ID" : "872312313",
+    "FNAME" : "james",
+    "EMAIL" : "james@ece.mcgill.ca"
+  }
+]

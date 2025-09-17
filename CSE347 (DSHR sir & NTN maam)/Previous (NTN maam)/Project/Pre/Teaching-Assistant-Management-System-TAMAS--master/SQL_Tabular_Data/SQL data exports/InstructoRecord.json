@@ -1,0 +1,122 @@
+[
+  {
+    "PASSWORD" : "dlowther123",
+    "USERNAME" : "dlowther@mcgill.ca",
+    "LNAME" : "Lowther",
+    "EVALUATION" : "",
+    "FNAME" : "David",
+    "COURSE" : "ECSE202 ECSE211"
+  },
+  {
+    "PASSWORD" : "tszkopek123",
+    "USERNAME" : "tszkopek@mcgill.ca",
+    "LNAME" : "Szkopek",
+    "EVALUATION" : "",
+    "FNAME" : "Thomas",
+    "COURSE" : "ECSE200"
+  },
+  {
+    "PASSWORD" : "fferrie123",
+    "USERNAME" : "fferrie@mcgill.ca",
+    "LNAME" : "Ferrie",
+    "EVALUATION" : "",
+    "FNAME" : "Frank",
+    "COURSE" : "ECSE211"
+  },
+  {
+    "PASSWORD" : "apakniyat123",
+    "USERNAME" : "apakniyat@mcgill.ca",
+    "LNAME" : "Pakniyat",
+    "EVALUATION" : "",
+    "FNAME" : "Ali",
+    "COURSE" : ""
+  },
+  {
+    "PASSWORD" : "lchen123",
+    "USERNAME" : "lchen@mcgill.ca",
+    "LNAME" : "Chen",
+    "EVALUATION" : "",
+    "FNAME" : "Lawrence",
+    "COURSE" : "ECSE206"
+  },
+  {
+    "PASSWORD" : "mlevine123",
+    "USERNAME" : "mlevine@mcgill.ca",
+    "LNAME" : "Levine",
+    "EVALUATION" : "",
+    "FNAME" : "Martin",
+    "COURSE" : "ECSE210"
+  },
+  {
+    "PASSWORD" : "smcfee123",
+    "USERNAME" : "smcfee@mcgill.ca",
+    "LNAME" : "McFee",
+    "EVALUATION" : "",
+    "FNAME" : "Steve",
+    "COURSE" : "ECSE205"
+  },
+  {
+    "PASSWORD" : "amahajan123",
+    "USERNAME" : "amahajan@mcgill.ca",
+    "LNAME" : "Mahajan",
+    "EVALUATION" : "",
+    "FNAME" : "Aditya",
+    "COURSE" : "ECSE222 ECSE428"
+  },
+  {
+    "PASSWORD" : "ilovesequencediagrams",
+    "USERNAME" : "gmussbacher@mcgill.ca",
+    "LNAME" : "Mussbacher",
+    "EVALUATION" : "",
+    "FNAME" : "Gunter",
+    "COURSE" : "ECSE223 ECSE539"
+  },
+  {
+    "PASSWORD" : "dgiannacopoulos123",
+    "USERNAME" : "dgiannacopoulos@mcgill.ca",
+    "LNAME" : "Giannacopoulos",
+    "EVALUATION" : "",
+    "FNAME" : "Dennis",
+    "COURSE" : "ECSE251"
+  },
+  {
+    "PASSWORD" : "dnowrouzezahrai123",
+    "USERNAME" : "dnowrouzezahrai@mcgill.ca",
+    "LNAME" : "Nowrouzezahrai",
+    "EVALUATION" : "",
+    "FNAME" : "Derek",
+    "COURSE" : "ECSE324"
+  },
+  {
+    "PASSWORD" : "dvarro123",
+    "USERNAME" : "dvarro@mcgill.ca",
+    "LNAME" : "Varro",
+    "EVALUATION" : "",
+    "FNAME" : "Daniel",
+    "COURSE" : "ECSE321 ECSE428"
+  },
+  {
+    "PASSWORD" : "dplant123",
+    "USERNAME" : "dplant@mcgill.ca",
+    "LNAME" : "Plant",
+    "EVALUATION" : "",
+    "FNAME" : "David",
+    "COURSE" : "ECSE330"
+  },
+  {
+    "PASSWORD" : "jcooperstock123",
+    "USERNAME" : "jcooperstock@mcgill.ca",
+    "LNAME" : "Cooperstock",
+    "EVALUATION" : "",
+    "FNAME" : "Jeremy",
+    "COURSE" : "ECSE421"
+  },
+  {
+    "PASSWORD" : "dmeger123",
+    "USERNAME" : "dmeger@mcgill.ca",
+    "LNAME" : "Meger",
+    "EVALUATION" : "",
+    "FNAME" : "David",
+    "COURSE" : ""
+  }
+]

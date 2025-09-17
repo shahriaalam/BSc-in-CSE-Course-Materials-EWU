@@ -1,0 +1,28 @@
+.top-section{
+    display: flex;
+    margin: 100px;
+}
+.half-width{
+    width: 50%;
+}
+.half-width img{
+    width: 20%;
+    margin-left: 200px;
+}
+.margin100{
+    margin: 100px;
+}
+.exam_table{
+    border: 1px solid;
+    width: 100%;
+    border-collapse: collapse;
+}
+.exam_table_th{
+    border: 1px solid;
+}
+.exam_table_td{
+    border: 1px solid;
+}
+footer p{
+    text-align: center;
+}

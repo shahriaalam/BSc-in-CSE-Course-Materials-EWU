@@ -1,0 +1,78 @@
+namespace ca.mcgill.ecse321.TAMAS.model;
+
+class Tamas {
+
+}
+
+class Person
+{
+  name;
+  username;
+  password;
+}
+
+
+class Evaluation
+{
+  0..* -- 1 Instructor;
+  1 -- 1 Job;
+}
+
+class Session {
+  Weekday { Monday{} Tuesday{} Wednesday{} Thursday{} Friday{} }
+  Time startTime;
+  Time endTime;
+  int sectionNumber;
+  String location;
+  boolean isLabSession; // else TutorialSession
+}
+
+class Student
+{
+  String studentId;
+  isA Person;
+  boolean isGrad;
+  1 jobCandidate -- 0..3 Job offeredJob;
+}
+
+class Course
+{
+  String courseCode;
+  int courseCredit;
+   1 <@>- 0..* Session specificSession;
+}
+
+class Instructor
+{
+  * -- * Course courseTaught;
+  isA Person;
+}
+
+class EceAdmin
+{
+  1 -- * Course courseList;
+  isA Person;
+}
+
+class Job
+{
+  const int MIN_HOURS = 45;
+  const int MAX_HOURS = 180;
+  int numberOfHours;
+  int salary;
+  boolean isTaJob; // else GraderJob
+  boolean isAssignedToStudent;
+  boolean isAllocatedToStudent; // When finalized
+  description;
+  deadline;
+  autounique jobId;
+  JobState { IsPosted{} AppliedTo{} AssignedStudentTo{} AssignmentFinalized{} }
+  * -- 1 Course course;
+}
+
+class JobApplication {
+  String experience;
+  preference { ta{} grader{} both{} }
+  0..3 -- 1 Student applicant;
+  0..* -- 1 Job appliedJob;
+}

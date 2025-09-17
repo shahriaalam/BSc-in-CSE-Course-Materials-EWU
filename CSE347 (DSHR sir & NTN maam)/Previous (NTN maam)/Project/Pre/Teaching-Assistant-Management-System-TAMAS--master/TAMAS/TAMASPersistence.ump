@@ -1,0 +1,75 @@
+external interface Serializable {}
+
+// Based on BTMSPersistence.ump
+
+class Tamas {
+  depend java.io.Serializable;
+  isA Serializable;
+  private static final long serialVersionUID = -2683593616927798071L;
+}
+
+class Course {
+  depend java.io.Serializable;
+  isA Serializable;
+  private static final long serialVersionUID = 2315072607928790501L;
+  private static Map<String, Course> coursesByCourseCode = new HashMap<String, Course>();
+  
+  public static void reinitializeCourse(List<Course> courses) {
+    coursesByCourseCode = new HashMap<String, Course>();
+    for (Course course : courses) {
+    	coursesByCourseCode.put(course.getCourseCode(), course);
+    }
+  }
+ 
+}
+
+class Person {
+  depend java.io.Serializable;
+  isA Serializable;
+  private static final long serialVersionUID = 8896099581655989380L;
+  private static Map<String, Person> PersonsByUsername = new HashMap<String, Person>();
+  
+  public static void reinitializeUsername(List<Person> persons) {
+    PersonsByUsername = new HashMap<String, Person>();
+    for (Person person : persons) {
+      PersonsByUsername.put(person.getUsername(), person);
+    }
+  }
+}
+
+class Job {
+	  depend java.io.Serializable;
+	  isA Serializable;
+	  private static final long serialVersionUID = 2045406856025012133L;
+	  private static int nextId;
+	  
+	  public static void reinitializeAutouniqueID(List<Job> jobs) {
+	    nextId = 0; 
+	    for (Job job : jobs) {
+	      if (job.getJobId() > nextId) {
+	        nextId = job.getJobId();
+	      }
+	    }
+	    nextId++;
+	  }
+	}
+
+
+// Should these 3 be here?
+class Evaluation {
+  depend java.io.Serializable;
+  isA Serializable;
+  private static final long serialVersionUID = 386717977557499839L;
+}
+
+class JobApplication {
+  depend java.io.Serializable;
+  isA Serializable;
+  private static final long serialVersionUID = -3900912597282882073L;
+}
+
+class Session {
+	  depend java.io.Serializable;
+	  isA Serializable;
+	  private static final long serialVersionUID = -3900912597282882073L;
+	}

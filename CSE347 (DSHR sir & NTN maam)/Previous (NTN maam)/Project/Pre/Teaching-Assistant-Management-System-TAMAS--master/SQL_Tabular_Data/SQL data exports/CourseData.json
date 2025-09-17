@@ -1,0 +1,137 @@
+[
+  {
+    "COURSE_CODE" : "ECSE200",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Thomas_Szkopek",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2000",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "100"
+  },
+  {
+    "COURSE_CODE" : "ECSE202",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "David_Lowther",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "1800",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "78"
+  },
+  {
+    "COURSE_CODE" : "ECSE205",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Steve_McFee",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "1400",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "13"
+  },
+  {
+    "COURSE_CODE" : "ECSE206",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Lawrence_Chen",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2000",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "132"
+  },
+  {
+    "COURSE_CODE" : "ECSE210",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Martin_Levine",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2400",
+    "COURSE_HOUR" : "36",
+    "COURSE_ENROLMENT" : "60"
+  },
+  {
+    "COURSE_CODE" : "ECSE211",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "David_Lowther Frank_Ferrie",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2000",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "141"
+  },
+  {
+    "COURSE_CODE" : "ECSE222",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Aditya_Mahajan",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2000",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "113"
+  },
+  {
+    "COURSE_CODE" : "ECSE223",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Gunter_Mussbacher",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2300",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "124"
+  },
+  {
+    "COURSE_CODE" : "ECSE251",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Dennis_Giannacopoulos",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2000",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "130"
+  },
+  {
+    "COURSE_CODE" : "ECSE324",
+    "COURSE_CREDIT" : "4",
+    "COURSE_INSTRUCTOR" : "Derek_Nowrouzezahrai",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2500",
+    "COURSE_HOUR" : "45",
+    "COURSE_ENROLMENT" : "89"
+  },
+  {
+    "COURSE_CODE" : "ECSE539",
+    "COURSE_CREDIT" : "4",
+    "COURSE_INSTRUCTOR" : "Gunter_Mussbacher",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2000",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "30"
+  },
+  {
+    "COURSE_CODE" : "ECSE321",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Daniel_Varro",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "3000",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "120"
+  },
+  {
+    "COURSE_CODE" : "ECSE330",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "David_Plant",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2500",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "60"
+  },
+  {
+    "COURSE_CODE" : "ECSE428",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Aditya_Mahajan Daniel_Varro",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "1600",
+    "COURSE_HOUR" : "44",
+    "COURSE_ENROLMENT" : "87"
+  },
+  {
+    "COURSE_CODE" : "ECSE421",
+    "COURSE_CREDIT" : "3",
+    "COURSE_INSTRUCTOR" : "Jeremy_Cooperstock",
+    "COURSE_SESSION" : "",
+    "COURSE_BUDGET" : "2450",
+    "COURSE_HOUR" : "40",
+    "COURSE_ENROLMENT" : "30"
+  }
+]

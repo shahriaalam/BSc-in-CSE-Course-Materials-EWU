@@ -1,0 +1,28 @@
+package ca.mcgill.ecse321.TAMAS.view;
+
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JTextArea;
+import java.io.File;
+
+
+public class ECEAdminPage {
+	
+	JLabel welcomeLabel; 
+	JTextArea courseTextArea; 
+	JFileChooser courseFileChooser; 
+	int resultFileChooser; 
+	
+	public ECEAdminPage() {
+		initComponents();	
+	}
+	
+	public void initComponents(){
+		welcomeLabel=new JLabel("Welcome! ECEadmin please choose a file to load the course allocation into TAMAS!"); 
+		courseTextArea=new JTextArea();
+		courseTextArea.setColumns(30);
+		courseTextArea.setRows(25);
+		
+	}
+}
