@@ -1,0 +1,92 @@
+-- 2021-3-60-016
+-- Practice Queries (Lab 05)
+
+--Q1  	SELECT*
+	FROM instructor I
+	Where I.salary>(SELECT avg(salary) FROM instructor I1 WHERE I.dept_name = I1.dept_name);
+
+
+--Q2  	SELECT I.name, I.salary
+	FROM(SELECT max(salary) as max_sal FROM instructor) temp1,instructor I
+	Where I.salary=temp1.max_sal;
+
+
+--Q3  	SELECT DISTINCT name
+	FROM instructor
+	WHERE ID IN ( SELECT DISTINCT t.ID
+   	 	      FROM teaches t
+   		      JOIN course c 
+		      ON t.course_id = c.course_id
+    		      WHERE c.credits > 3);
+
+                       OR
+
+	SELECT DISTINCT I.name
+	FROM instructor I
+	WHERE I.ID IN(SELECT T.ID
+  		      FROM teaches T
+  		      WHERE T.course_id IN (SELECT C.course_id
+                                    FROM Course C
+                                    WHERE C.Credits>3));
+
+
+--Q4	SELECT S.*
+	FROM student S
+	WHERE NOT EXISTS (SELECT * 
+			  FROM takes T	
+			  WHERE Semester= 'Spring' AND year=2010 AND S.id= T.id);
+
+
+--Q5	SELECT name
+	FROM student
+	WHERE ID IN (SELECT DISTINCT S.ID
+			FROM takes S JOIN teaches T ON S.course_id = T.course_id
+			WHERE T.ID = '45565');
+
+
+--Q6	SELECT temp.course_id, temp.sec_id
+	FROM (SELECT course_id, sec_id, count(id) as tot
+              FROM takes
+              GROUP BY course_id, sec_id) temp
+	WHERE temp.tot = (SELECT max(temp2.t)
+                FROM (SELECT course_id, sec_id, count(id) as t
+                FROM takes
+                GROUP BY course_id, sec_id)temp2);
+
+
+--Q7 	SELECT dept_name
+	FROM department
+	WHERE budget < (SELECT AVG(budget) 	
+			FROM department);
+
+
+--Q8 	SELECT temp.course_id, AVG(num_students) AS avg_std_per_sec
+	FROM ( SELECT course_id, sec_id, COUNT(id) AS num_students
+    	       FROM takes
+   	       GROUP BY course_id, sec_id) temp
+	GROUP BY temp.course_id;
+
+
+--Q9 	SELECT dept_name
+	FROM (SELECT dept_name, COUNT(*) AS student_count
+      	      FROM student
+     	      GROUP BY dept_name) dept_counts
+	WHERE student_count >= 3;
+
+
+--Q10	SELECT I.name AS name, d.dept_name
+	FROM instructor I JOIN department d 
+	ON I.dept_name = d.dept_name
+	WHERE I.id IN (SELECT I.id FROM section 
+                       GROUP BY I.id 
+		       HAVING COUNT(*) >= 2);
+
+
+
+
+
+
+
+
+
+

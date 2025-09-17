@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Meter_Con" directorySegmentName="seg_0" id="99FA4305-28E8-F1B9-51CA-B882B1CAE681">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:46:42 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<sourcePk>8600732B-E97A-3BA6-42A5-F00582D72F43</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>032C8A67-7773-2BEA-014E-734869A2440F</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>ADC3DDE0-EBFE-900C-B349-D17D4539D60A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

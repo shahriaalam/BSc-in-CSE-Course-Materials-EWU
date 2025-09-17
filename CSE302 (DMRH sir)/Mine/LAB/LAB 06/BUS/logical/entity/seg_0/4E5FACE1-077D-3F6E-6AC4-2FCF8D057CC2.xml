@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4E5FACE1-077D-3F6E-6AC4-2FCF8D057CC2" name="Route">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:55:49 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Route_id" id="C3A96176-E0E6-55FD-A99D-428C4B158340">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:56:07 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Start_location" id="1BA001CA-669C-42D0-E7D2-12A39D207652">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:56:29 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="End_location" id="C71BC50A-D1B7-6F57-CE72-EAB2B9F05EE4">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:56:54 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Distance" id="C40DF492-841F-EDE4-59D5-51497FA40B58">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:57:19 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Estimated_duration" id="91C8D1C1-00F1-ED35-D972-C2A5327C448D">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:57:46 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fare" id="5E63D2BD-1274-8841-57EE-44169619CA48">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:58:29 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bus_ID" id="B0E072A1-8285-9984-A4A8-336A9BACA4AF">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:20:14 UTC</createdTime>
+<generatorID>84E29112-F72E-A011-6742-2A37C92A7E52</generatorID>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<referedAttribute>938B04DF-24D3-C4B6-7224-BB4F933830F9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Company_ID" id="5817BB93-B730-9371-EFA3-DE44BC376D39">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:21:10 UTC</createdTime>
+<generatorID>9F890FC9-C4CC-A41A-CE63-1CE6BE546306</generatorID>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<referedAttribute>1E5C9E12-AD29-7C33-2173-902337338705</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D869FA43-DD7B-D1FA-5F77-0F100E8EB2F7" name="Route PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:56:27 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C3A96176-E0E6-55FD-A99D-428C4B158340</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

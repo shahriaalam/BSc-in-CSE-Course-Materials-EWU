@@ -1,0 +1,27 @@
+|Lab5part3
+A2 => always0~10.IN0
+A2 => always0~7.IN0
+A2 => always0~1.IN0
+A2 => always0~4.IN0
+A1 => always0~10.IN1
+A1 => always0~4.IN1
+A1 => always0~1.IN1
+A1 => always0~7.IN1
+A0 => always0~11.IN1
+A0 => always0~8.IN0
+A0 => always0~5.IN0
+A0 => always0~2.IN0
+A0 => always0~0.IN0
+A0 => always0~3.IN0
+A0 => always0~6.IN0
+A0 => always0~9.IN1
+O7 <= always0~11.DB_MAX_OUTPUT_PORT_TYPE
+O6 <= always0~9.DB_MAX_OUTPUT_PORT_TYPE
+O5 <= always0~8.DB_MAX_OUTPUT_PORT_TYPE
+O4 <= always0~6.DB_MAX_OUTPUT_PORT_TYPE
+O3 <= always0~5.DB_MAX_OUTPUT_PORT_TYPE
+O2 <= always0~3.DB_MAX_OUTPUT_PORT_TYPE
+O1 <= always0~2.DB_MAX_OUTPUT_PORT_TYPE
+O0 <= always0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

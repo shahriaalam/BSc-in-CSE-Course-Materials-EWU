@@ -1,0 +1,13 @@
+* Schematics Netlist *
+
+
+
+V_V1         In $N_0001  AC 5
++SIN 0 12 400 0 0 0
+R_R1         0 Out  1k  
+D_D3         0 $N_0001 D1N4002 
+D_D1         0 In D1N4002 
+D_D8         0 Out D1N750 
+D_D5         $N_0001 Out D1N4002 
+D_D4         In Out D1N4002 
+C_C1         0 Out  470uF  

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FBF4BD75-6D3F-E7AB-0140-991C87E0C4D9" containerWithKeyObject="CFC548FC-6DCB-FC21-ECE8-E43FFDACC989" localFKIndex="EA66752C-5930-48C9-E508-A45BF1572FE1" name="Billing_Consumption_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>2BEACF75-73B3-22F3-2DA5-9B6C4024B6A0</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<referredTableLongName>Consumption</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CA1A2D59-B79B-5504-FE17-F7130E043F6E</referredTableID>
+<keyObject>8109BB11-2F27-AFBD-6E47-A138911CE0C4</keyObject>
+<referredKeyID>8109BB11-2F27-AFBD-6E47-A138911CE0C4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Consumption_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,39 @@
+**	SELECT dept_name,Round(avg(salary),2)
+	FROM instructor
+	GROUP BY dept_name
+	HAVING avg(salary)>42000;
+
+
+**	SELECT temp1.dept_name,Round(temp1.avg_salary,2)
+	FROM(SELECT dept_name,avg(salary) as avg_salary
+	FROM instructor
+	GROUP BY dept_name) temp1
+	Where temp1.avg_salary>42000;
+
+
+
+**	SELECT name, salary
+	FROM instructor
+	WHERE salary> (SELECT min (salary)FROM instructor);
+
+**	SELECT I.name, I.salary
+	FROM(SELECT min(salary) as min_salary FROM instructor) temp1, instructor I
+	WHERE I.salary> temp1.min_salary;
+
+
+---- Sub query within FROM clause
+
+** 	SELECT D.dept_name, D.budget
+	FROM(SELECT avg(budget) as avg_budget FROM department) temp1, department D
+	Where D.budget>temp1.avg_budget;
+
+
+
+----- Using WITH clause-----------
+
+WITH temp1(avg_budget) as
+(SELECT avg(budget) From department)
+SELECT D.dept_name, D.budget
+FROM temp1, department D
+Where D.budget> temp1.avg_budget;
+

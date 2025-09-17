@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0B6D8896-1B2D-2F46-CAE3-E61BE867DE9B" name="Ticket">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:06:53 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Ticket_number" id="FA6F0533-659D-9D00-3D9D-A24304CB15F1">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:07:03 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Seat_number" id="E340B025-CD24-8CC8-0912-B0C753B726F9">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:07:40 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Reservation_ID" id="38140412-856E-FA19-901A-5B621A93AB5A">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:23:53 UTC</createdTime>
+<generatorID>184D5B30-7A4D-8F84-9B77-D979C0A5E7CC</generatorID>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<referedAttribute>3C0DCF6A-D7A8-5638-9BD7-4A4AC428A831</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9BC2A46F-926E-03BA-E00C-ECFA563BDBBC" name="Ticket PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:07:38 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FA6F0533-659D-9D00-3D9D-A24304CB15F1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

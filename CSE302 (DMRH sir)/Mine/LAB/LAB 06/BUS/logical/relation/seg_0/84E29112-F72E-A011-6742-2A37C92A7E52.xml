@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Path" directorySegmentName="seg_0" id="84E29112-F72E-A011-6742-2A37C92A7E52">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:20:14 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<sourcePk>FDD2373E-2F2F-A821-272B-C5BBBE325583</sourcePk>
+<targetPk>D869FA43-DD7B-D1FA-5F77-0F100E8EB2F7</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6A4D520C-3CB1-B85E-7B03-2252147EB1A9</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>4E5FACE1-077D-3F6E-6AC4-2FCF8D057CC2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

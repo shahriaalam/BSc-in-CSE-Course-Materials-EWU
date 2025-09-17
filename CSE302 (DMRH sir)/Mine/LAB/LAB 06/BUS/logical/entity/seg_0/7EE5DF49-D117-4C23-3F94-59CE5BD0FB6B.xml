@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7EE5DF49-D117-4C23-3F94-59CE5BD0FB6B" name="Reservation">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:17:40 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Reservation_ID" id="3C0DCF6A-D7A8-5638-9BD7-4A4AC428A831">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:18:02 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_id" id="24603F99-1212-781B-27B5-9AA968FCD24D">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:26:10 UTC</createdTime>
+<generatorID>F530773B-431B-5BE5-4057-EFD646394DCC</generatorID>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<referedAttribute>F67B918B-F9A5-B6C3-87D6-08D3AFC599ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="77EFE8C6-5CD4-BD4D-AC4A-B628A878C8D7">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:26:10 UTC</createdTime>
+<generatorID>F530773B-431B-5BE5-4057-EFD646394DCC</generatorID>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<referedAttribute>11753515-4FAE-F145-05E0-8BA200AD984D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Phone_number" id="EB27F718-55AE-B9C7-AE72-39F65E42B9D8">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:26:10 UTC</createdTime>
+<generatorID>F530773B-431B-5BE5-4057-EFD646394DCC</generatorID>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<referedAttribute>93B2647C-A211-9531-B7DF-2B001B84F5C3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="25EA6893-74D2-72A8-8E66-3986772ABC43" name="Reservation PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:18:12 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3C0DCF6A-D7A8-5638-9BD7-4A4AC428A831</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA1A2D59-B79B-5504-FE17-F7130E043F6E" name="Consumption">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>ADC3DDE0-EBFE-900C-B349-D17D4539D60A</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Consumption_ID" id="2F9C0EC5-8C6C-ABE3-34F3-8880410D8D0F">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>7C19894E-9FE8-D0C7-31F8-CECE7B7C18FC</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reading_Date" id="E8C99170-0989-E19A-0F4B-0BD6692087FF">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>EF3C584A-8C3F-D300-466C-AF616EF5C2AD</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reading_Unit" id="B31D4664-3DF6-6C9F-68C5-7B1AD7306C91">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>8056BCCA-BDA9-F837-658F-BCA519D2299B</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Meter_no" id="0796FB79-DC8F-9692-D2E7-11BEE89519ED">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>D9787421-C3CA-17AC-1E00-4E92732CED3F</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3216C068-F8C2-1FC0-3BBF-7CD12C404198" referredColumn="C803CD0D-10C0-CE0E-8D7D-77DAA6482AA7"/>
+</associations>
+</Column>
+<Column name="Customer_ID" id="B8999996-5BCE-C484-E98A-D7483D6656DB">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>BE27B907-118A-1CEA-9AF7-B71B6C1A8721</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F6B72FF-79CD-A725-DD1B-10A8790DB94C" referredColumn="FEA32E01-2FDF-7789-2399-5AFEC43DA8FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8109BB11-2F27-AFBD-6E47-A138911CE0C4" name="Consumption_PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>B1694267-FD2A-B369-1708-E92228FCBCC1</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F9C0EC5-8C6C-ABE3-34F3-8880410D8D0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="96F24E29-30E1-22EB-6D50-968DFAE7C6D3" name="Consumption__IDX">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>ED5363F0-2DCE-7A05-550A-D0AD654B6278</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="B8999996-5BCE-C484-E98A-D7483D6656DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CFC00728-EE92-2175-64EB-E592FDF62ECD" name="Consumption__IDXv1">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>99FA4305-28E8-F1B9-51CA-B882B1CAE681</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="0796FB79-DC8F-9692-D2E7-11BEE89519ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FD9DB584-9028-1AB6-DD21-E19324B2C2EA" name="Consumption_Customer_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>ED5363F0-2DCE-7A05-550A-D0AD654B6278</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8999996-5BCE-C484-E98A-D7483D6656DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8A43787A-E5F5-B479-5FFF-E44EBA87B030" name="Consumption_Meter_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>99FA4305-28E8-F1B9-51CA-B882B1CAE681</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0796FB79-DC8F-9692-D2E7-11BEE89519ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

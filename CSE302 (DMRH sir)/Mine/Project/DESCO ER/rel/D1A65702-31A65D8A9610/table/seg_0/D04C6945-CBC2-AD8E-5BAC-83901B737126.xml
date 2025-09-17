@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D04C6945-CBC2-AD8E-5BAC-83901B737126" name="Year">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>5C2420E1-7786-F379-1B74-C07D55410AD0</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Year_ID" id="9E1DE847-A02C-5C9F-010F-DEAE5C1E0C83">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>B2D8236C-511D-4986-0FBC-B29EF21AEC69</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Year" id="AF97AF05-52D0-414F-4BB6-991BB8B9E244">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>CD24FEFB-9C9B-DEC9-4BD5-12E2E13B91AC</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9CF5BC73-AD9F-5A2A-4CF7-72440C329BC2" name="Year_PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>AACA29A7-9734-570D-CEAB-BFCB496EC817</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E1DE847-A02C-5C9F-010F-DEAE5C1E0C83"/>
+<colUsage columnID="AF97AF05-52D0-414F-4BB6-991BB8B9E244"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

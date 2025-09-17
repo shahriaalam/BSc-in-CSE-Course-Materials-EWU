@@ -1,0 +1,16 @@
+|lab3_part1
+A => always0~6.IN0
+A => always0~4.IN0
+A => always0~2.IN0
+A => always0~0.IN0
+B => always0~6.IN1
+B => always0~2.IN1
+B => always0~4.IN1
+B => always0~0.IN1
+C => always0~7.IN0
+C => always0~1.IN1
+C => always0~5.IN0
+C => always0~3.IN0
+S <= S~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

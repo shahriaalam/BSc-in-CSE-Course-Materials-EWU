@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="BC0C30AB-EA26-EBB9-9F0F-FD3031B7F97F" mainViewID="F64005BE-DF85-C1EB-DD58-C5F0123B0413">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:42:52 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

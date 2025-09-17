@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5C2420E1-7786-F379-1B74-C07D55410AD0" name="Year">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:45:25 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Year_ID" id="B2D8236C-511D-4986-0FBC-B29EF21AEC69">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:45:25 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>313D3EA1-6D5B-AD88-1FAA-71E3479B31F8</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Year" id="CD24FEFB-9C9B-DEC9-4BD5-12E2E13B91AC">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:45:25 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>3F6467F4-ECDE-922A-BEE7-D482AECA3DBD</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AACA29A7-9734-570D-CEAB-BFCB496EC817" name="Year PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:45:25 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B2D8236C-511D-4986-0FBC-B29EF21AEC69</attributeRef>
+<attributeRef>CD24FEFB-9C9B-DEC9-4BD5-12E2E13B91AC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

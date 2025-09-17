@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Bill_Month" directorySegmentName="seg_0" id="D54695FD-8654-7808-9BCA-671716FCA7DF">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:48:25 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<sourcePk>356D33C6-4851-BFCC-6A5E-FCC4D736AE65</sourcePk>
+<targetPk>96A174C5-A2D9-3C5D-AA5D-DA3F6924B335</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7574347F-FFA4-F340-616E-B4094DFC2EE1</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>AB9886DB-8893-E512-A98A-818697CE2633</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

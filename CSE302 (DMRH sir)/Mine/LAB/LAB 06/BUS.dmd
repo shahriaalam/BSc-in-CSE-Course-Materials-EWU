@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BUS" id="3F618ED5-B4FD-A5E8-FA9F-B2727BF16B3A" version="3.5">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:48:17 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>3F618ED5-B4FD-A5E8-FA9F-B2727BF16B3A</designId>
+</OSDM_Design>

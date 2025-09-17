@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="6FE8288D-6263-FE21-D97D-9C7D6E0099ED">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:42:52 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

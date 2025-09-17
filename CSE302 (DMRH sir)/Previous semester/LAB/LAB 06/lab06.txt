@@ -1,0 +1,15 @@
+--create view
+create view v as 
+	(select id, name from instructor
+	where dept_name = 'Comp. Sci.');
+
+select * from v;
+
+
+--user_views 
+select view_name, text, view_type_owner from user_views;
+
+---SELECT user permission
+
+select * from user_tab_privs where table_name = 'V';
+

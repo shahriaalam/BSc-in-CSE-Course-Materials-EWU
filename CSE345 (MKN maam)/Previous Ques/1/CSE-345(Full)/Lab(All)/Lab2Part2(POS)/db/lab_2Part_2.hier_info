@@ -1,0 +1,9 @@
+|lab_2Part_2
+A => g2.IN0
+A => g1.IN0
+B => g1.IN1
+C => g2.IN1
+D => ~NO_FANOUT~
+F <= g3.DB_MAX_OUTPUT_PORT_TYPE
+
+

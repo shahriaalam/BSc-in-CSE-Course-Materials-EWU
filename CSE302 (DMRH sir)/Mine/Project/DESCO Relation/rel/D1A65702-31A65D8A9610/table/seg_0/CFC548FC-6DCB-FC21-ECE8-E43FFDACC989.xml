@@ -1,0 +1,221 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CFC548FC-6DCB-FC21-ECE8-E43FFDACC989" name="Billing">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>AB9886DB-8893-E512-A98A-818697CE2633</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Billing_ID" id="2ACC9C01-CEE6-06AB-7017-F207D721B235">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>06148900-B4EF-2A46-7FA4-05DE5C1A4B08</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bill_Date" id="0EE37878-DDB8-0A20-4C2B-CFFC58F93AAD">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>CE485010-73A3-78AB-A5EE-30A48E7756D5</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Due_Date" id="C5076DEE-2153-4DC7-7AFA-FDCD892D5A2E">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>B5093CA1-5BDD-2893-95D0-FC2F8851D3A2</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total_Amount" id="311103C4-2984-EB7C-5CFB-C9FCCCA5C869">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>F4556867-9BA7-9880-3C2A-9222F8D0C506</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Consumption_ID" id="84B6092C-13F2-2A0F-82A4-C9BB9CD1E359">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>9DF582FB-C53D-81B6-7885-DAAAA87EC5B1</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FBF4BD75-6D3F-E7AB-0140-991C87E0C4D9" referredColumn="2F9C0EC5-8C6C-ABE3-34F3-8880410D8D0F"/>
+</associations>
+</Column>
+<Column name="Year_ID" id="0EF7BE9A-2FE0-8C0B-4DDA-38BF8E0DE7D1">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>17D9E9CC-CDE3-98AA-444F-442DA4F45CFB</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="30694E76-0136-7079-CD9C-2B2253254AB1" referredColumn="9E1DE847-A02C-5C9F-010F-DEAE5C1E0C83"/>
+</associations>
+</Column>
+<Column name="Year" id="640B22E3-9DF0-61F9-F8CE-B09DB3502FEB">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>9BD83F84-838A-59DE-97C6-D80C476EE0E2</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="30694E76-0136-7079-CD9C-2B2253254AB1" referredColumn="AF97AF05-52D0-414F-4BB6-991BB8B9E244"/>
+</associations>
+</Column>
+<Column name="Month_ID" id="D3C0936C-3DCD-2F6F-D405-5DF89BFEFF32">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>48E9C292-6D15-8511-3F30-490516452665</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1691E9C9-29CC-8985-4F1F-917D676F0FB0" referredColumn="F8FE1904-1C4E-59AB-C6CD-A0C51CD65BE8"/>
+</associations>
+</Column>
+<Column name="Month_Name" id="AA745D09-1532-5A1D-908F-F33551635523">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>857BF353-0458-DB50-7E33-0EE5B351BAF1</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1691E9C9-29CC-8985-4F1F-917D676F0FB0" referredColumn="5A813CDA-55DA-7AE8-15E7-E91481F370AE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48FB9283-FA0D-12E7-7D6E-58EFB02066FF" name="Billing_PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>96A174C5-A2D9-3C5D-AA5D-DA3F6924B335</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2ACC9C01-CEE6-06AB-7017-F207D721B235"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EBD02ABA-DE10-F83A-73D4-984A25B5A270" name="Billing__IDX">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D54695FD-8654-7808-9BCA-671716FCA7DF</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="D3C0936C-3DCD-2F6F-D405-5DF89BFEFF32"/>
+<colUsage columnID="AA745D09-1532-5A1D-908F-F33551635523"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E119A40-6AC5-2469-A82E-47FFFDC3F557" name="Billing__IDXv1">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C26B1A01-D80F-CC50-D13B-BB864A540BFD</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="0EF7BE9A-2FE0-8C0B-4DDA-38BF8E0DE7D1"/>
+<colUsage columnID="640B22E3-9DF0-61F9-F8CE-B09DB3502FEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C5DDB45-D37B-8E8C-8B1B-D0CF9D9522D5" name="Billing__IDXv2">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>2BEACF75-73B3-22F3-2DA5-9B6C4024B6A0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="84B6092C-13F2-2A0F-82A4-C9BB9CD1E359"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75F51ED9-D0B9-92FC-7942-1D7E85DE0216" name="Billing_Month_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>D54695FD-8654-7808-9BCA-671716FCA7DF</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D3C0936C-3DCD-2F6F-D405-5DF89BFEFF32"/>
+<colUsage columnID="AA745D09-1532-5A1D-908F-F33551635523"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="743B324D-D566-8CF5-BED5-B52CE67E2C20" name="Billing_Year_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>C26B1A01-D80F-CC50-D13B-BB864A540BFD</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0EF7BE9A-2FE0-8C0B-4DDA-38BF8E0DE7D1"/>
+<colUsage columnID="640B22E3-9DF0-61F9-F8CE-B09DB3502FEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA66752C-5930-48C9-E508-A45BF1572FE1" name="Billing_Consumption_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>2BEACF75-73B3-22F3-2DA5-9B6C4024B6A0</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84B6092C-13F2-2A0F-82A4-C9BB9CD1E359"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

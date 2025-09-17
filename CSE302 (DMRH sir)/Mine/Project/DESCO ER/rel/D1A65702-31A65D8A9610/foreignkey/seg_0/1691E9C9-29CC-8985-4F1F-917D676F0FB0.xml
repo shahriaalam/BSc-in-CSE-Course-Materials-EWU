@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1691E9C9-29CC-8985-4F1F-917D676F0FB0" containerWithKeyObject="CFC548FC-6DCB-FC21-ECE8-E43FFDACC989" localFKIndex="75F51ED9-D0B9-92FC-7942-1D7E85DE0216" name="Billing_Month_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>D54695FD-8654-7808-9BCA-671716FCA7DF</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<referredTableLongName>Month</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>71875BB5-D13D-ADB8-F4C1-95634D0A73E7</referredTableID>
+<keyObject>A631D961-6F13-CEB4-C044-BE3EFF39D364</keyObject>
+<referredKeyID>A631D961-6F13-CEB4-C044-BE3EFF39D364</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Month_ID,Month_Name</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

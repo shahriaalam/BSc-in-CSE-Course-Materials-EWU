@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B92FCB27-4FF9-2E24-15C1-38FDF2538576" name="Team">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 06:17:06 UTC</createdTime>
+<ownerDesignName>Lab 6</ownerDesignName>
+<engineerTo>
+<item key="A423BD3F-1084-CACD-2F94-95A056D042CF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Name" id="58F86EC1-8585-D4DE-3597-A06A4454688B">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 06:17:12 UTC</createdTime>
+<ownerDesignName>Lab 6</ownerDesignName>
+<engineerTo>
+<item key="A423BD3F-1084-CACD-2F94-95A056D042CF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="City" id="0AADD0A7-FCA3-84EB-E683-0F464FD236BA">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 06:17:52 UTC</createdTime>
+<ownerDesignName>Lab 6</ownerDesignName>
+<engineerTo>
+<item key="A423BD3F-1084-CACD-2F94-95A056D042CF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Captain" id="9E462DC1-9AB3-6C99-6228-D2C491B44FE1">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 06:18:14 UTC</createdTime>
+<ownerDesignName>Lab 6</ownerDesignName>
+<engineerTo>
+<item key="A423BD3F-1084-CACD-2F94-95A056D042CF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Couch" id="D8D44E5C-44BA-2EDA-DBA1-6AB9A17DEEB3">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 06:19:13 UTC</createdTime>
+<ownerDesignName>Lab 6</ownerDesignName>
+<engineerTo>
+<item key="A423BD3F-1084-CACD-2F94-95A056D042CF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E5121F43-727B-CE47-2D55-857668D72942" name="Team  PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 06:17:23 UTC</createdTime>
+<ownerDesignName>Lab 6</ownerDesignName>
+<engineerTo>
+<item key="A423BD3F-1084-CACD-2F94-95A056D042CF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>58F86EC1-8585-D4DE-3597-A06A4454688B</newElementsIDs>
+<usedAttributes>
+<attributeRef>58F86EC1-8585-D4DE-3597-A06A4454688B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

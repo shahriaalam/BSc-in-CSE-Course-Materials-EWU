@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="32140505-BB33-33B4-AAEA-55E3EA954B3F" name="Customer">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:59:36 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Customer_id" id="F67B918B-F9A5-B6C3-87D6-08D3AFC599ED">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:59:44 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="First_name" id="68F8BF4B-AF90-A4A1-50AD-2F05C11C43C9">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:00:19 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Last_name" id="CF1B02F9-5290-8EC5-AF4E-4A4107E706CD">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:00:45 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="11753515-4FAE-F145-05E0-8BA200AD984D">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:00:59 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Phone_number" id="93B2647C-A211-9531-B7DF-2B001B84F5C3">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:01:34 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Company_ID" id="B9CDCAE8-1056-ECAA-6FD7-A19B33E8AE25">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:25:45 UTC</createdTime>
+<generatorID>8A16423E-F8F8-7D78-ED99-19FFD5A7F619</generatorID>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<referedAttribute>1E5C9E12-AD29-7C33-2173-902337338705</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B53CE82B-EFEF-8FC9-0F0B-DB3E9657C141" name="Customer PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:00:17 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F67B918B-F9A5-B6C3-87D6-08D3AFC599ED</attributeRef>
+<attributeRef>11753515-4FAE-F145-05E0-8BA200AD984D</attributeRef>
+<attributeRef>93B2647C-A211-9531-B7DF-2B001B84F5C3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

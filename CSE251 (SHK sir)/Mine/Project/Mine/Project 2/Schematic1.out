@@ -1,0 +1,188 @@
+
+**** 05/22/23 00:45:07 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\bmsha\OneDrive\Desktop\Project\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon May 22 00:45:02 2023
+
+
+
+** Analysis setup **
+.tran 0ns 5ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+V_V1         In $N_0001  AC 5
++SIN 0 12 400 0 0 0
+R_R1         0 Out  1k  
+D_D3         0 $N_0001 D1N4002 
+D_D1         0 In D1N4002 
+D_D8         0 Out D1N750 
+D_D5         $N_0001 Out D1N4002 
+D_D4         In Out D1N4002 
+C_C1         0 Out  470uF  
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=In -=$N_0001 )
+R_R1            R1(1=0 2=Out )
+D_D3            D3(1=0 2=$N_0001 )
+D_D1            D1(1=0 2=In )
+D_D8            D8(1=0 2=Out )
+D_D5            D5(1=$N_0001 2=Out )
+D_D4            D4(1=In 2=Out )
+C_C1            C1(1=0 2=Out )
+_    _(In=In)
+_    _(Out=Out)
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+**** 05/22/23 00:45:07 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\bmsha\OneDrive\Desktop\Project\Schematic1.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4002         D1N750          
+          IS   14.110000E-09  880.500000E-18 
+           N    1.984                        
+         ISR  100.000000E-12    1.859000E-09 
+         IKF   94.81                         
+          BV  100.1             4.7          
+         IBV   10                .020245     
+         NBV                    1.6989       
+        IBVL                    1.955600E-03 
+        NBVL                   14.976        
+          RS     .03389          .25         
+          TT    4.761000E-06                 
+         CJO   51.170000E-12  175.000000E-12 
+          VJ     .3905           .75         
+           M     .2762           .5516       
+        TBV1                  -21.277000E-06 
+
+
+**** 05/22/23 00:45:07 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\bmsha\OneDrive\Desktop\Project\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   In) 1.525E-18  (  Out) 888.7E-24  ($N_0001) 1.525E-18                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 05/22/23 00:45:07 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\bmsha\OneDrive\Desktop\Project\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** DIODES
+
+
+NAME         D_D3        D_D1        D_D8        D_D5        D_D4      
+MODEL        D1N4002     D1N4002     D1N750      D1N4002     D1N4002   
+ID           0.00E+00    0.00E+00   -0.00E+00    0.00E+00    0.00E+00 
+VD          -1.52E-18   -1.52E-18   -8.89E-22    1.52E-18    1.52E-18 
+REQ          3.61E+06    3.61E+06    2.78E+07    3.61E+06    3.61E+06 
+CAP          5.25E-11    5.25E-11    1.75E-10    5.25E-11    5.25E-11 
+**** 05/22/23 00:45:07 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\bmsha\OneDrive\Desktop\Project\Schematic1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   In) 1.525E-18  (  Out) 888.7E-24  ($N_0001) 1.525E-18                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

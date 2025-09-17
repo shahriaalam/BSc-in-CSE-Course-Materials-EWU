@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Company_route" directorySegmentName="seg_0" id="9F890FC9-C4CC-A41A-CE63-1CE6BE546306">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:21:10 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<sourcePk>798B8E53-8A27-343B-A97A-EC94E973701E</sourcePk>
+<targetPk>D869FA43-DD7B-D1FA-5F77-0F100E8EB2F7</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D272584E-2D2E-D70F-BF93-DBEF56922005</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4E5FACE1-077D-3F6E-6AC4-2FCF8D057CC2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

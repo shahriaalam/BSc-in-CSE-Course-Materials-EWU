@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="830926BA-7F7C-7B5D-D1DF-09D6E4A8DD5E" name="Area">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>A1A2144E-5105-FB39-A388-738F4CCC7E48</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Area_ID" id="34BC0BC0-7022-338F-69DB-816F9F19772B">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>C276EAC0-5182-6EFB-C498-A866B59CE20F</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tariff" id="AE33AC72-93D9-6E2E-8A3E-C678E0BAC019">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>EC3238BF-70B8-7E66-BB87-1FB126377811</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Zone" id="0B8917DD-FFBD-17FB-FCA6-FBAFEA91A941">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>6DB6E9E5-3A25-0D44-C55C-406F9EAC3121</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Walking_Order" id="85FDC694-B25B-9690-955D-EDE9691C8FCA">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>7CC95BB8-D766-735F-8FAB-AC9920C17CF4</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Customer_ID" id="2BC28360-3F9E-BD43-471F-BCE114EB0D9A">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>6CCD22BE-715E-D42E-4BB4-8945DE9BDDE7</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36F84372-82F0-739B-25E5-1875AB9D789F" referredColumn="FEA32E01-2FDF-7789-2399-5AFEC43DA8FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9BDC3951-8D11-B77A-4774-1CC3FB3CBF55" name="Area_PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>1E015829-3036-855D-3360-179C17A9B831</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="34BC0BC0-7022-338F-69DB-816F9F19772B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E757B4E-69EB-3240-98FD-DB61B8D8117A" name="Area__IDX">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F517DD26-EE96-EB60-4A23-D46E2529FF41</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="2BC28360-3F9E-BD43-471F-BCE114EB0D9A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1CC7140B-554D-8CB4-58C8-A31BF02E9C23" name="Area_Customer_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>F517DD26-EE96-EB60-4A23-D46E2529FF41</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BC28360-3F9E-BD43-471F-BCE114EB0D9A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

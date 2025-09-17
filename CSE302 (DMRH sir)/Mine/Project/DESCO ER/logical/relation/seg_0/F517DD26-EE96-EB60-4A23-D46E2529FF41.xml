@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Cus_Area" directorySegmentName="seg_0" id="F517DD26-EE96-EB60-4A23-D46E2529FF41">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:46:23 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<sourcePk>439B672D-EEFF-7C1E-6C9B-418CCCFDB352</sourcePk>
+<targetPk>1E015829-3036-855D-3360-179C17A9B831</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>427313D0-DAED-7C4E-5872-26F1A35D1605</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>A1A2144E-5105-FB39-A388-738F4CCC7E48</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

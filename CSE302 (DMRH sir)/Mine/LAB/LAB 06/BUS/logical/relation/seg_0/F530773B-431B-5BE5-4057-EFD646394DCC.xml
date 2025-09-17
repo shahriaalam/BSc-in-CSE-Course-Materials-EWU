@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="C_reservation" directorySegmentName="seg_0" id="F530773B-431B-5BE5-4057-EFD646394DCC">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 08:26:10 UTC</createdTime>
+<ownerDesignName>BUS</ownerDesignName>
+<engineerTo>
+<item key="A7E7CA71-1449-81C8-7493-173CE2195257" value="true"/>
+</engineerTo>
+<sourcePk>B53CE82B-EFEF-8FC9-0F0B-DB3E9657C141</sourcePk>
+<targetPk>25EA6893-74D2-72A8-8E66-3986772ABC43</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>32140505-BB33-33B4-AAEA-55E3EA954B3F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7EE5DF49-D117-4C23-3F94-59CE5BD0FB6B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

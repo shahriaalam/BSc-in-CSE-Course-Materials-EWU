@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Cus_Con" directorySegmentName="seg_0" id="ED5363F0-2DCE-7A05-550A-D0AD654B6278">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:47:02 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<sourcePk>439B672D-EEFF-7C1E-6C9B-418CCCFDB352</sourcePk>
+<targetPk>B1694267-FD2A-B369-1708-E92228FCBCC1</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>427313D0-DAED-7C4E-5872-26F1A35D1605</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>ADC3DDE0-EBFE-900C-B349-D17D4539D60A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

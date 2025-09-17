@@ -1,0 +1,7 @@
+module Lab5part1 
+      (input E, A1, A0,  output O3, O2, O1, O0);
+	or  g1(O0, E, A1, A0),
+		g2(O1, E, A1, ~A0),
+		g3(O2, E, ~A1, A0),
+		g4(O3, E, ~A1, ~A0);
+endmodule

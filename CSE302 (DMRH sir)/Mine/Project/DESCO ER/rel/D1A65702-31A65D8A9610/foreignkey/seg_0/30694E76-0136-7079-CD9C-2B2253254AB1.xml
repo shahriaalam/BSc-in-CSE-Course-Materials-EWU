@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="30694E76-0136-7079-CD9C-2B2253254AB1" containerWithKeyObject="CFC548FC-6DCB-FC21-ECE8-E43FFDACC989" localFKIndex="743B324D-D566-8CF5-BED5-B52CE67E2C20" name="Billing_Year_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>C26B1A01-D80F-CC50-D13B-BB864A540BFD</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<referredTableLongName>Year</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D04C6945-CBC2-AD8E-5BAC-83901B737126</referredTableID>
+<keyObject>9CF5BC73-AD9F-5A2A-4CF7-72440C329BC2</keyObject>
+<referredKeyID>9CF5BC73-AD9F-5A2A-4CF7-72440C329BC2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Year_ID,Year</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

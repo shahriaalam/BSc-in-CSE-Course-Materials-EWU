@@ -1,0 +1,19 @@
+|Lab5part1
+E => g4.IN2
+E => g3.IN2
+E => g2.IN2
+E => g1.IN2
+A1 => g2.IN0
+A1 => g1.IN0
+A1 => g3.IN0
+A1 => g4.IN0
+A0 => g3.IN1
+A0 => g1.IN1
+A0 => g2.IN1
+A0 => g4.IN1
+O3 <= g4.DB_MAX_OUTPUT_PORT_TYPE
+O2 <= g3.DB_MAX_OUTPUT_PORT_TYPE
+O1 <= g2.DB_MAX_OUTPUT_PORT_TYPE
+O0 <= g1.DB_MAX_OUTPUT_PORT_TYPE
+
+

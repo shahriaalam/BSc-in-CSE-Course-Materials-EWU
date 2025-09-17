@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3216C068-F8C2-1FC0-3BBF-7CD12C404198" containerWithKeyObject="CA1A2D59-B79B-5504-FE17-F7130E043F6E" localFKIndex="8A43787A-E5F5-B479-5FFF-E44EBA87B030" name="Consumption_Meter_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>99FA4305-28E8-F1B9-51CA-B882B1CAE681</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<referredTableLongName>Meter</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7A2731D8-6F8A-46B5-45EB-BFAA66F2A0CE</referredTableID>
+<keyObject>375E6D82-570C-C836-A0C8-FC9A41D00E28</keyObject>
+<referredKeyID>375E6D82-570C-C836-A0C8-FC9A41D00E28</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Meter_no</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

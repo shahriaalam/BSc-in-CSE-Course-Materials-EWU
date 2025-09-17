@@ -1,0 +1,9 @@
+module lab3_part1 (input A,B,C, output S); 
+always@(A,B,C) begin 
+S=0;
+if(~A&~B&C) S=1;
+if(~A&B&~C) S=1;
+if(A&~B&~C) S=1;
+if(A&B&C) S=1;
+end 
+endmodule

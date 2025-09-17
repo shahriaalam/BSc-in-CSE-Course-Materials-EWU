@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DESCO Relation" id="18C74DA7-9E96-26C1-77BA-C3E608DAA660" version="3.5">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:42:52 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>18C74DA7-9E96-26C1-77BA-C3E608DAA660</designId>
+</OSDM_Design>

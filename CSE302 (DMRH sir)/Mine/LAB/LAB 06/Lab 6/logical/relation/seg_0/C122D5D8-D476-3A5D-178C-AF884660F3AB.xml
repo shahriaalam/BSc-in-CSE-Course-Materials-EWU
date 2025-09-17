@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Has_Injury" directorySegmentName="seg_0" id="C122D5D8-D476-3A5D-178C-AF884660F3AB">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 06:55:51 UTC</createdTime>
+<ownerDesignName>Lab 6</ownerDesignName>
+<engineerTo>
+<item key="A423BD3F-1084-CACD-2F94-95A056D042CF" value="true"/>
+</engineerTo>
+<sourcePk>F6A0DEDA-129D-0D1F-46EA-27EB3FD01801</sourcePk>
+<targetPk>D1812552-1889-B256-4D45-8C56A8B576CC</targetPk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3222CFBC-93C2-EDCD-9FA8-0D4CDF15F197</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E26BD8DD-1229-0B0F-A02D-59F8BEC6305B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

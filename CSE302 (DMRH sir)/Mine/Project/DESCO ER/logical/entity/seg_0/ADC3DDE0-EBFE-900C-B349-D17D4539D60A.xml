@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ADC3DDE0-EBFE-900C-B349-D17D4539D60A" name="Consumption">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:43 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Consumption_ID" id="7C19894E-9FE8-D0C7-31F8-CECE7B7C18FC">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:43 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>757E5B02-BE42-C812-D154-302F783CD2CD</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Reading_Date" id="EF3C584A-8C3F-D300-466C-AF616EF5C2AD">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:43 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>68D03584-59E1-CC8E-F4A2-6AA5620F9053</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Reading_Unit" id="8056BCCA-BDA9-F837-658F-BCA519D2299B">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:43 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>66105698-F389-ACDE-4DBC-57BB73F93830</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Meter_no" id="D9787421-C3CA-17AC-1E00-4E92732CED3F">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:46:42 UTC</createdTime>
+<generatorID>99FA4305-28E8-F1B9-51CA-B882B1CAE681</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<referedAttribute>648D1527-050F-2043-FF14-A54C6666D5EC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_ID" id="BE27B907-118A-1CEA-9AF7-B71B6C1A8721">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:47:02 UTC</createdTime>
+<generatorID>ED5363F0-2DCE-7A05-550A-D0AD654B6278</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<referedAttribute>CD0FDC3B-0B29-E03F-D5B3-F6583145A6DF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B1694267-FD2A-B369-1708-E92228FCBCC1" name="Consumption PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:43 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7C19894E-9FE8-D0C7-31F8-CECE7B7C18FC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

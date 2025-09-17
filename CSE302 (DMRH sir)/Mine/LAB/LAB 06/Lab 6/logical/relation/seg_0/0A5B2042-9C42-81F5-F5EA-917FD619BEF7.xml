@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Captain" directorySegmentName="seg_0" id="0A5B2042-9C42-81F5-F5EA-917FD619BEF7">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-03 07:14:05 UTC</createdTime>
+<ownerDesignName>Lab 6</ownerDesignName>
+<engineerTo>
+<item key="A423BD3F-1084-CACD-2F94-95A056D042CF" value="true"/>
+</engineerTo>
+<sourcePk>F6A0DEDA-129D-0D1F-46EA-27EB3FD01801</sourcePk>
+<targetPk>F6A0DEDA-129D-0D1F-46EA-27EB3FD01801</targetPk>
+<identifying>false</identifying>
+<nameOnSource>Captain</nameOnSource>
+<nameOnTarget>Player</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3222CFBC-93C2-EDCD-9FA8-0D4CDF15F197</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3222CFBC-93C2-EDCD-9FA8-0D4CDF15F197</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

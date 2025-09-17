@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="427313D0-DAED-7C4E-5872-26F1A35D1605" name="Customer">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:20 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Customer_ID" id="CD0FDC3B-0B29-E03F-D5B3-F6583145A6DF">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:20 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>0605461F-3F32-9103-CD95-532FAFA44E83</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="600FE17B-B8D0-0A8F-C50E-1F1D8C37068A">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:20 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>8274CE46-BC85-7E6B-594B-66BD82AF1F5D</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Address" id="46D54ECB-46BC-70FE-0025-66DD6AB15841">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:20 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>F2A96983-0332-2F03-CA34-C17ADB5ACB51</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Phone" id="A73051F1-76D2-A377-7398-1096F8006F70">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:20 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>BF461971-D312-52DB-74F9-3AE6E2DC8B83</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Area" id="9D2581A9-4FC7-4CFC-F38F-5B363FD76722">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:20 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>FF20D716-F140-2A2B-94CB-6C66A1B82B3C</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Postal_Code" id="F56821D5-55D5-F07C-216B-CDD388EE5944">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:20 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<importedID>CC25D17C-640C-91C1-D6CB-68F0EE8F8CE7</importedID>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="439B672D-EEFF-7C1E-6C9B-418CCCFDB352" name="Customer PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:44:20 UTC</createdTime>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<engineerTo>
+<item key="D1A65702-FA4D-882F-92D6-31A65D8A9610" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CD0FDC3B-0B29-E03F-D5B3-F6583145A6DF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

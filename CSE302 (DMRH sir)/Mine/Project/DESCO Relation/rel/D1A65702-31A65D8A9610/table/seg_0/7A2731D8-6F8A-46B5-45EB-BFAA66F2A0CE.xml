@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7A2731D8-6F8A-46B5-45EB-BFAA66F2A0CE" name="Meter">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>032C8A67-7773-2BEA-014E-734869A2440F</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Meter_no" id="C803CD0D-10C0-CE0E-8D7D-77DAA6482AA7">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>648D1527-050F-2043-FF14-A54C6666D5EC</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sec_load" id="E17813EB-5F40-777F-F18B-B7AD2CB550A3">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>664233B4-8FA6-4214-B02E-4A0F43C09D9A</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Installation_Date" id="8F04CDD7-8CE8-CD07-7934-C975C950B70C">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>A156BD13-87DD-16D3-A515-9A8D2EB28A2D</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Customer_ID" id="117C3002-F1DF-7FF6-750E-ABC76BB17326">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>0D7A2127-02CE-A8EE-96EB-6A0291BB3F3C</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="262D862E-E108-7B65-AD94-0B1EBD5E51C1" referredColumn="FEA32E01-2FDF-7789-2399-5AFEC43DA8FB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="375E6D82-570C-C836-A0C8-FC9A41D00E28" name="Meter_PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>8600732B-E97A-3BA6-42A5-F00582D72F43</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C803CD0D-10C0-CE0E-8D7D-77DAA6482AA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="355FBF8B-BAD7-942F-4C0E-7EA2C9600228" name="Meter__IDX">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>935D6C0C-EB2A-9EA6-725D-2E04A6B9BD14</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="117C3002-F1DF-7FF6-750E-ABC76BB17326"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B1A477A4-4601-F6F1-9253-9DAF67F66849" name="Meter_Customer_FK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>935D6C0C-EB2A-9EA6-725D-2E04A6B9BD14</generatorID>
+<ownerDesignName>DESCO Relation</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="117C3002-F1DF-7FF6-750E-ABC76BB17326"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="71875BB5-D13D-ADB8-F4C1-95634D0A73E7" name="Month">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>7574347F-FFA4-F340-616E-B4094DFC2EE1</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Month_ID" id="F8FE1904-1C4E-59AB-C6CD-A0C51CD65BE8">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>1FC637F6-3BA4-9165-A3DC-43D5B0D28E75</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Month_Name" id="5A813CDA-55DA-7AE8-15E7-E91481F370AE">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>50BAFCF7-2061-88A0-B898-DEA469FD6FDA</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A631D961-6F13-CEB4-C044-BE3EFF39D364" name="Month_PK">
+<createdBy>bmsha</createdBy>
+<createdTime>2023-12-23 19:49:39 UTC</createdTime>
+<generatorID>356D33C6-4851-BFCC-6A5E-FCC4D736AE65</generatorID>
+<ownerDesignName>DESCO ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8FE1904-1C4E-59AB-C6CD-A0C51CD65BE8"/>
+<colUsage columnID="5A813CDA-55DA-7AE8-15E7-E91481F370AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
